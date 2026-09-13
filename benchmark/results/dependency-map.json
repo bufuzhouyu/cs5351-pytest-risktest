@@ -1,0 +1,1177 @@
+{
+ "edge_count": 272,
+ "history": {
+  "tests/test_billing.py::test_discount_applies_above_threshold": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_billing.py::test_subtotal_adds_lines": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_billing.py::test_subtotal_skips_invalid_lines": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_billing.py::test_total_with_tax": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_catalog.py::test_count": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_catalog.py::test_register_and_price": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_01.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_02.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_03.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_04.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_05.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_06.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_07.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_compute": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_compute_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_compute_is_linear": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_normalize_total": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_spread": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_spread_of_empty": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_top_returns_descending_prefix": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_feature_08.py::test_weight_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_mathx.py::test_add": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_mathx.py::test_clamp": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_mathx.py::test_mul": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_mathx.py::test_with_tax": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_memory.py::test_default_value": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_memory.py::test_insert_and_get": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_memory.py::test_size_and_keys": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_reports.py::test_biggest": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_reports.py::test_biggest_of_empty_list": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_reports.py::test_cheap_items": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_reports.py::test_summary": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_textx.py::test_normalize": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_textx.py::test_slugify": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_textx.py::test_titleize": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_validate.py::test_bounded_quantity_clamps": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_validate.py::test_bounded_quantity_rejects_non_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_validate.py::test_is_positive": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  },
+  "tests/test_validate.py::test_validate_line": {
+   "always_run": false,
+   "failures": 0,
+   "flaky": false,
+   "last_status": "passed",
+   "runs": 1
+  }
+ },
+ "imports": {
+  "app/__init__.py": [],
+  "app/core/__init__.py": [],
+  "app/core/mathx.py": [],
+  "app/core/textx.py": [],
+  "app/features/__init__.py": [],
+  "app/features/feature_01.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_02.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_03.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_04.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_05.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_06.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_07.py": [
+   "app/core/mathx.py"
+  ],
+  "app/features/feature_08.py": [
+   "app/core/mathx.py"
+  ],
+  "app/services/__init__.py": [],
+  "app/services/billing.py": [
+   "app/core/mathx.py",
+   "app/utils/validate.py"
+  ],
+  "app/services/catalog.py": [
+   "app/core/textx.py",
+   "app/store/memory.py"
+  ],
+  "app/services/reports.py": [
+   "app/services/billing.py"
+  ],
+  "app/store/__init__.py": [],
+  "app/store/memory.py": [],
+  "app/utils/__init__.py": [],
+  "app/utils/validate.py": [
+   "app/core/mathx.py"
+  ],
+  "tests/__init__.py": [],
+  "tests/support.py": [],
+  "tests/test_billing.py": [
+   "app/services/billing.py"
+  ],
+  "tests/test_catalog.py": [
+   "app/services/catalog.py"
+  ],
+  "tests/test_feature_01.py": [
+   "app/features/feature_01.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_02.py": [
+   "app/features/feature_02.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_03.py": [
+   "app/features/feature_03.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_04.py": [
+   "app/features/feature_04.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_05.py": [
+   "app/features/feature_05.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_06.py": [
+   "app/features/feature_06.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_07.py": [
+   "app/features/feature_07.py",
+   "tests/support.py"
+  ],
+  "tests/test_feature_08.py": [
+   "app/features/feature_08.py",
+   "tests/support.py"
+  ],
+  "tests/test_mathx.py": [
+   "app/core/mathx.py"
+  ],
+  "tests/test_memory.py": [
+   "app/store/memory.py"
+  ],
+  "tests/test_reports.py": [
+   "app/services/reports.py"
+  ],
+  "tests/test_textx.py": [
+   "app/core/textx.py"
+  ],
+  "tests/test_validate.py": [
+   "app/utils/validate.py"
+  ]
+ },
+ "root": "subject_01",
+ "test_count": 88,
+ "tests": {
+  "tests/test_billing.py::test_discount_applies_above_threshold": [
+   "app/core/mathx.py",
+   "app/services/billing.py",
+   "app/utils/validate.py",
+   "tests/test_billing.py"
+  ],
+  "tests/test_billing.py::test_subtotal_adds_lines": [
+   "app/core/mathx.py",
+   "app/services/billing.py",
+   "app/utils/validate.py",
+   "tests/test_billing.py"
+  ],
+  "tests/test_billing.py::test_subtotal_skips_invalid_lines": [
+   "app/core/mathx.py",
+   "app/services/billing.py",
+   "app/utils/validate.py",
+   "tests/test_billing.py"
+  ],
+  "tests/test_billing.py::test_total_with_tax": [
+   "app/core/mathx.py",
+   "app/services/billing.py",
+   "app/utils/validate.py",
+   "tests/test_billing.py"
+  ],
+  "tests/test_catalog.py::test_count": [
+   "app/core/textx.py",
+   "app/services/catalog.py",
+   "app/store/memory.py",
+   "tests/test_catalog.py"
+  ],
+  "tests/test_catalog.py::test_register_and_price": [
+   "app/core/textx.py",
+   "app/services/catalog.py",
+   "app/store/memory.py",
+   "tests/test_catalog.py"
+  ],
+  "tests/test_feature_01.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_compute_empty": [
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_spread": [
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_spread_of_empty": [
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_top_returns_descending_prefix": [
+   "app/features/feature_01.py",
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_01.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_01.py"
+  ],
+  "tests/test_feature_02.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_compute_empty": [
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_spread": [
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_spread_of_empty": [
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_top_returns_descending_prefix": [
+   "app/features/feature_02.py",
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_02.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_02.py"
+  ],
+  "tests/test_feature_03.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_compute_empty": [
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_spread": [
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_spread_of_empty": [
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_top_returns_descending_prefix": [
+   "app/features/feature_03.py",
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_03.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_03.py"
+  ],
+  "tests/test_feature_04.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_compute_empty": [
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_spread": [
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_spread_of_empty": [
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_top_returns_descending_prefix": [
+   "app/features/feature_04.py",
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_04.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_04.py"
+  ],
+  "tests/test_feature_05.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_compute_empty": [
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_spread": [
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_spread_of_empty": [
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_top_returns_descending_prefix": [
+   "app/features/feature_05.py",
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_05.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_05.py"
+  ],
+  "tests/test_feature_06.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_compute_empty": [
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_spread": [
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_spread_of_empty": [
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_top_returns_descending_prefix": [
+   "app/features/feature_06.py",
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_06.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_06.py"
+  ],
+  "tests/test_feature_07.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_compute_empty": [
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_spread": [
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_spread_of_empty": [
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_top_returns_descending_prefix": [
+   "app/features/feature_07.py",
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_07.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_07.py"
+  ],
+  "tests/test_feature_08.py::test_compute": [
+   "app/core/mathx.py",
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_compute_empty": [
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_compute_is_linear": [
+   "app/core/mathx.py",
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_normalize_total": [
+   "app/core/mathx.py",
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_spread": [
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_spread_of_empty": [
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_top_returns_descending_prefix": [
+   "app/features/feature_08.py",
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_feature_08.py::test_weight_is_positive": [
+   "tests/support.py",
+   "tests/test_feature_08.py"
+  ],
+  "tests/test_mathx.py::test_add": [
+   "app/core/mathx.py",
+   "tests/test_mathx.py"
+  ],
+  "tests/test_mathx.py::test_clamp": [
+   "app/core/mathx.py",
+   "tests/test_mathx.py"
+  ],
+  "tests/test_mathx.py::test_mul": [
+   "app/core/mathx.py",
+   "tests/test_mathx.py"
+  ],
+  "tests/test_mathx.py::test_with_tax": [
+   "app/core/mathx.py",
+   "tests/test_mathx.py"
+  ],
+  "tests/test_memory.py::test_default_value": [
+   "app/store/memory.py",
+   "tests/test_memory.py"
+  ],
+  "tests/test_memory.py::test_insert_and_get": [
+   "app/store/memory.py",
+   "tests/test_memory.py"
+  ],
+  "tests/test_memory.py::test_size_and_keys": [
+   "app/store/memory.py",
+   "tests/test_memory.py"
+  ],
+  "tests/test_reports.py::test_biggest": [
+   "app/services/reports.py",
+   "tests/test_reports.py"
+  ],
+  "tests/test_reports.py::test_biggest_of_empty_list": [
+   "app/services/reports.py",
+   "tests/test_reports.py"
+  ],
+  "tests/test_reports.py::test_cheap_items": [
+   "app/services/reports.py",
+   "tests/test_reports.py"
+  ],
+  "tests/test_reports.py::test_summary": [
+   "app/core/mathx.py",
+   "app/services/billing.py",
+   "app/services/reports.py",
+   "app/utils/validate.py",
+   "tests/test_reports.py"
+  ],
+  "tests/test_textx.py::test_normalize": [
+   "app/core/textx.py",
+   "tests/test_textx.py"
+  ],
+  "tests/test_textx.py::test_slugify": [
+   "app/core/textx.py",
+   "tests/test_textx.py"
+  ],
+  "tests/test_textx.py::test_titleize": [
+   "app/core/textx.py",
+   "tests/test_textx.py"
+  ],
+  "tests/test_validate.py::test_bounded_quantity_clamps": [
+   "app/core/mathx.py",
+   "app/utils/validate.py",
+   "tests/test_validate.py"
+  ],
+  "tests/test_validate.py::test_bounded_quantity_rejects_non_positive": [
+   "app/utils/validate.py",
+   "tests/test_validate.py"
+  ],
+  "tests/test_validate.py::test_is_positive": [
+   "app/utils/validate.py",
+   "tests/test_validate.py"
+  ],
+  "tests/test_validate.py::test_validate_line": [
+   "app/utils/validate.py",
+   "tests/test_validate.py"
+  ]
+ }
+}

@@ -93,6 +93,7 @@ generated layered projects and this project itself (self-hosted).  Full detail:
 src/pytest_risktest/   plugin, monitor (PEP 669), graph, store, selector, flaky, metrics, report, CLI
 tests/                 96 tests: unit tests plus end-to-end plugin tests in subprocesses
 benchmark/             subject generator, mutation operators, harness, experiments, results
+scripts/               dev helper, burndown chart, store inspector, dependency-map exporter
 docs/                  assignment mapping, problem statement, requirements, architecture, process, report draft
 .github/               issue and pull-request templates, CI workflow
 ```
@@ -123,4 +124,3 @@ docs/                  assignment mapping, problem statement, requirements, arch
 ## License
 
 MIT, see [LICENSE](LICENSE).
-
