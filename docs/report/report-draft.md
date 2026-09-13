@@ -519,7 +519,7 @@ affected tests, with the safety net in place from the first sprint.
 deferred local line strategy), the static import graph, the SQLite store with
 digest caching and change detection without git, the selection engine with
 policies, the always-run set and the stop rules, the pytest plug-in, the CLI, the
-first 95 automated tests, the benchmark harness, and the process documents
+first 96 automated tests, the benchmark harness, and the process documents
 (requirements, ADRs, evaluation contract, risk register).
 
 **Activities.** Stories were estimated in story points and tracked as issues; the
@@ -716,6 +716,17 @@ the tool answers "what does *this* change require?" -- and it is why the benchma
 restores the store between policy runs instead of running three policies
 back-to-back.
 
+**Stale bytecode can hide a change from the interpreter itself.**  CPython
+validates a cached `.pyc` against the source file's size and its mtime *rounded to
+seconds*.  A same-length edit applied within the same second as the previous run
+therefore executes the old bytecode, and the change looks harmless even though it
+is real.  We hit this while hardening the test suite: the tool reported the change
+and ran the right tests, but the interpreter executed stale bytecode.  The
+harness and the integration tests now clear `__pycache__` whenever they mutate a
+file, and the tool's own change detection is unaffected because it compares
+nanosecond mtimes and content digests.  The lesson generalises: a selection tool
+can only observe what the interpreter actually executed.
+
 ### 6.6 Thresholds
 
 | RQ | Frozen threshold | Result | Met |
@@ -889,7 +900,7 @@ report are reproducible from these artefacts).
 | Artefact | Path |
 | --- | --- |
 | Tool source (2 212 lines) | `src/pytest_risktest/` |
-| Tests (95) | `tests/` |
+| Tests (96) | `tests/` |
 | Benchmark harness | `benchmark/run_bench.py`, `benchmark/mutate.py`, `benchmark/generate_subjects.py` |
 | Raw results | `benchmark/results/{benchmark.csv,benchmark.json,summary.md}` |
 | Experiments | `benchmark/experiments/{tracing_strategies.py,untraced_paths.py}` |
@@ -899,4 +910,3 @@ report are reproducible from these artefacts).
 | Evaluation contract | `docs/05-evaluation-contract.md` |
 | Risk register | `docs/06-risk-register.md` |
 | Process evidence | `docs/process/` |
-

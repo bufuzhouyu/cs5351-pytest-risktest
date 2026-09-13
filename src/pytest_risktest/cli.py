@@ -265,7 +265,11 @@ def build_parser() -> argparse.ArgumentParser:
     impact.add_argument("--max-deselect", type=float, default=90.0)
     impact.add_argument("--min-selected", type=int, default=1)
     impact.add_argument("--limit", type=int, default=25, help="how many tests to print")
-    impact.add_argument("pytest_args", nargs="*", default=[], help="extra pytest arguments")
+    # REMAINDER so that pytest's own options (``--ignore=...``, ``-k ...``) can be
+    # forwarded without being parsed as risktest options.
+    impact.add_argument(
+        "pytest_args", nargs=argparse.REMAINDER, default=[], help="extra pytest arguments"
+    )
     impact.set_defaults(func=cmd_impact)
 
     report = sub.add_parser("report", help="render the JSON report produced by a run")
@@ -282,7 +286,7 @@ def build_parser() -> argparse.ArgumentParser:
     flaky.add_argument("--mark", action="store_true", help="store the suspects in the database")
     flaky.add_argument("--output", default="", help="write a Markdown table of verdicts")
     flaky.add_argument("--verbose", action="store_true")
-    flaky.add_argument("pytest_args", nargs="*", default=[])
+    flaky.add_argument("pytest_args", nargs=argparse.REMAINDER, default=[])
     flaky.set_defaults(func=cmd_flaky_check)
 
     clean = sub.add_parser("clean", help="delete the local risktest state directory")
@@ -300,4 +304,3 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
 if __name__ == "__main__":  # pragma: no cover
     sys.exit(main())
-

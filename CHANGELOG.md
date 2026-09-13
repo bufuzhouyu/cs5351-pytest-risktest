@@ -20,7 +20,7 @@ CS5351: three sprints of four weeks.
 * Added differential flakiness detection and the `flaky-check` command
   (`flaky.py`, `cli.py`).
 * Added JSON/Markdown/HTML run reports with inline SVG charts (`report.py`).
-* Added 95 tests (unit + ten end-to-end plugin tests in subprocesses).
+* Added 96 tests (unit + ten end-to-end plugin tests in subprocesses).
 * Added the evaluation harness, subject generator, mutation operators and three
   experiments (tracing strategies, untraced paths, self-hosted target).
 * Added the engineering documentation set (problem statement, requirements,

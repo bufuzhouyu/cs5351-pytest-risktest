@@ -18,6 +18,27 @@ from typing import Callable, List, Optional, Tuple
 SKIP_PARTS = {"__pycache__", "tests", "subject.json", ".risktest"}
 
 
+def clear_bytecode_cache(root: Path) -> int:
+    """Delete ``__pycache__`` directories under ``root``.
+
+    Why this is necessary: CPython validates a cached ``.pyc`` against the source
+    file's *size* and its mtime **rounded to seconds**.  A mutation that keeps the
+    line length unchanged and is applied within the same second as the previous
+    run therefore executes stale bytecode, and the mutation appears not to change
+    behaviour at all.  The harness removes the caches so a measurement can never be
+    explained by the interpreter's cache policy.  (The tool's own change detection
+    is unaffected: it compares nanosecond mtimes and content digests.)
+    """
+    removed = 0
+    for path in list(root.rglob("__pycache__")):
+        if path.is_dir():
+            import shutil
+
+            shutil.rmtree(path, ignore_errors=True)
+            removed += 1
+    return removed
+
+
 @dataclass(frozen=True)
 class Mutation:
     path: str
@@ -135,6 +156,7 @@ def apply_mutation(
                 except SyntaxError:
                     continue
                 path.write_text(candidate_text, encoding="utf-8")
+                clear_bytecode_cache(subject)
                 return Mutation(
                     path=path.relative_to(subject).as_posix(),
                     line=index + 1,
@@ -152,3 +174,4 @@ def revert(subject: Path, mutation: Mutation) -> None:
     index = mutation.line - 1
     lines[index] = mutation.before + "\n"
     path.write_text("".join(lines), encoding="utf-8")
+    clear_bytecode_cache(subject)

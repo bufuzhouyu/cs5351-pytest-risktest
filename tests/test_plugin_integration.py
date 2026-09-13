@@ -72,6 +72,21 @@ def _make_project(pytester: pytest.Pytester) -> Path:
     return root
 
 
+def _write_source(root: Path, relative: str, text: str) -> None:
+    """Write a source file and drop cached bytecode.
+
+    CPython invalidates a cached ``.pyc`` using the source *size* and the mtime
+    rounded to **seconds**.  A test that applies a same-length edit within the same
+    second as the previous run would otherwise execute the previous bytecode and
+    observe no change at all.
+    """
+    import shutil
+
+    (root / relative).write_text(text, encoding="utf-8")
+    for cache in root.rglob("__pycache__"):
+        shutil.rmtree(cache, ignore_errors=True)
+
+
 def _run(pytester: pytest.Pytester, *args: str):
     return pytester.runpytest_subprocess("-p", "pytest_risktest.plugin", *args)
 
@@ -106,9 +121,8 @@ def test_unchanged_tree_runs_only_the_minimum(pytester: pytest.Pytester) -> None
 def test_changed_module_selects_only_its_tests(pytester: pytest.Pytester) -> None:
     root = _make_project(pytester)
     _run(pytester, "--risktest", "--risktest-policy=off")
-    (root / "app" / "calc.py").write_text(CALC.replace("return a + b", "return a + b"), encoding="utf-8")
-    (root / "app" / "calc.py").write_text(
-        CALC.replace("    return a + b\n", "    return a + b  # touched\n"), encoding="utf-8"
+    _write_source(
+        root, "app/calc.py", CALC.replace("    return a + b\n", "    return a + b  # touched\n")
     )
     result = _run(pytester, "--risktest", "--risktest-policy=fast")
     result.assert_outcomes(passed=2, deselected=1)
@@ -120,9 +134,7 @@ def test_changed_module_selects_only_its_tests(pytester: pytest.Pytester) -> Non
 def test_failure_caused_by_the_change_is_never_hidden(pytester: pytest.Pytester) -> None:
     root = _make_project(pytester)
     _run(pytester, "--risktest", "--risktest-policy=off")
-    (root / "app" / "calc.py").write_text(
-        CALC.replace("return a + b", "return a - b"), encoding="utf-8"
-    )
+    _write_source(root, "app/calc.py", CALC.replace("return a + b", "return a - b"))
     result = _run(pytester, "--risktest", "--risktest-policy=fast")
     result.assert_outcomes(failed=1, passed=1, deselected=1)
     report = _report(root)
@@ -158,7 +170,7 @@ def test_always_run_marker_overrides_selection(pytester: pytest.Pytester) -> Non
         encoding="utf-8",
     )
     _run(pytester, "--risktest", "--risktest-policy=off")
-    (root / "app" / "unrelated.py").write_text("VALUE = 1\n", encoding="utf-8")
+    _write_source(root, "app/unrelated.py", "VALUE = 1\n")
     result = _run(pytester, "--risktest", "--risktest-policy=fast")
     result.assert_outcomes(passed=1, deselected=3)
     report = _report(root)
@@ -169,9 +181,7 @@ def test_always_run_marker_overrides_selection(pytester: pytest.Pytester) -> Non
 def test_line_granularity_records_changed_lines(pytester: pytest.Pytester) -> None:
     root = _make_project(pytester)
     _run(pytester, "--risktest", "--risktest-policy=off", "--risktest-granularity=line")
-    (root / "app" / "calc.py").write_text(
-        CALC.replace("    return a + b\n", "    return b + a\n"), encoding="utf-8"
-    )
+    _write_source(root, "app/calc.py", CALC.replace("    return a + b\n", "    return b + a\n"))
     result = _run(
         pytester, "--risktest", "--risktest-policy=fast", "--risktest-granularity=line"
     )
@@ -193,4 +203,3 @@ def test_reports_are_written_in_three_formats(pytester: pytest.Pytester) -> None
     assert (root / "out" / "run.json").exists()
     assert (root / "out" / "run.md").exists()
     assert (root / "out" / "run.html").exists()
-

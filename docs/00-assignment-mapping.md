@@ -37,7 +37,7 @@ the whole repository.
 ## What is already complete
 
 * a working tool (`src/pytest_risktest`, 2 212 lines) with an entry point, CLI and pytest plugin;
-* 95 automated tests, including ten end-to-end tests that drive the plugin in
+* 96 automated tests, including ten end-to-end tests that drive the plugin in
   real subprocesses and assert the safety properties;
 * a reproducible evaluation harness with four targets, verified mutations, three
   policies, 36 measured runs, and three dedicated experiments (tracing

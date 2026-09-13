@@ -45,6 +45,12 @@ snapshot before the next policy run.  A run that skips one of these steps would
 produce invalid evidence; each of them was added after observing the failure in
 practice (see R-7 in `docs/06-risk-register.md`).
 
+The results committed in `results/` were produced with this protocol.  The
+`__pycache__` clearing described below was added afterwards (after the same effect
+flaked one integration test); it removes a potential source of *rejected* mutations
+and therefore does not invalidate the committed measurements, which all passed the
+kill check.
+
 ## Reading the results
 
 * `results/summary.md` — aggregated per policy, per target kind, plus every mutation.
@@ -66,4 +72,8 @@ practice (see R-7 in `docs/06-risk-register.md`).
 * Timing on a shared Windows laptop: the harness reports one measurement per
   configuration and the summaries therefore include noise (visible as negative
   overhead values); conclusions use only effects that are larger than that noise.
-
+* Stale bytecode: CPython validates a cached `.pyc` using the source file's size
+  and its mtime rounded to seconds.  A same-length mutation applied within the same
+  second as the previous run would execute the old bytecode and look harmless, so
+  `mutate.apply_mutation`/`revert` clear `__pycache__` and the harness verifies that
+  every accepted mutation really breaks a test.

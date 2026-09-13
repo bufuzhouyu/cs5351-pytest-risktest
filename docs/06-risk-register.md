@@ -19,6 +19,7 @@ action; the decision date is when the team last reviewed it.
 | R-9 | Free-riding / uneven contribution | a member's weekly evidence is missing twice in a row | medium | medium | TL | weekly evidence table with owner per story; hours/story points in the contribution table; pro-rating per the course rule | — |
 | R-10 | Presentation/video done at the last minute | no demo script by week 10 | medium | high | ALL | outline in `docs/report/presentation-outline.md`; demo path frozen with the acceptance tests | — |
 | R-11 | AI-assisted code is merged without review or tests | a change with no linked test or no reviewer | medium | high | ALL | coding-agent contract (`docs/07-coding-agent-contract.md`): bounded task, tests required, human reviewer may reject; CI status check on every PR | 2026-09-14 |
+| R-12 | A change is invisible because the interpreter executes stale bytecode | a mutation keeps the line length and is applied within the same second as the previous run, so CPython reuses the cached `.pyc` (its validation uses size + mtime rounded to seconds) | medium | high (a failure appears to disappear) | R (benchmark) + R (docs) | the harness and the integration tests clear `__pycache__` around every mutation; the tool's own change detection compares nanosecond mtimes and content digests, so it still reports the change | 2026-09-14 |
 
 ## Stop rules (proceed / no-proceed)
 
@@ -41,4 +42,3 @@ action; the decision date is when the team last reviewed it.
 5. **Escalate a red CI check rather than skipping it.**  The status check is the
    evidence that a requirement's tests actually ran; disabling it is a
    no-proceed condition for a pull request.
-

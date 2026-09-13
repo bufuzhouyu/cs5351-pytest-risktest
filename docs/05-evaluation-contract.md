@@ -109,6 +109,7 @@ All three thresholds are met.  Two results deserve emphasis:
 | Wall-clock savings are modest on small suites | 10–18 % (start-up dominated) | report `work_saved` (63–85 %) alongside; state the start-up share explicitly |
 | The tool must run *once per change* | a second run on the same unchanged tree selects only the always-run set (stop rule) | documented; the benchmark restores the store between policies to keep the protocol honest |
 | Only one interpreter is observable | the tracing is per process | documented as a constraint in `docs/03-requirements.md` |
+| Stale bytecode can hide a mutation | CPython validates a cached `.pyc` by source size + mtime rounded to seconds, so a same-length edit inside one second executes the old bytecode | the harness clears `__pycache__` whenever it applies or reverts a mutation; the integration tests do the same |
 
 ## Reproducing
 
@@ -123,4 +124,3 @@ python benchmark/experiments/untraced_paths.py
 Every run writes raw data next to the summary, so a reviewer can recompute any
 aggregate: `benchmark/results/{benchmark.csv,benchmark.json,summary.md,
 tracing-strategies.md,untraced-paths.md}`.
-

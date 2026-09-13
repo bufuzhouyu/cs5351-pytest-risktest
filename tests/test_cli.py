@@ -67,6 +67,30 @@ def test_impact_after_a_traced_run(tmp_path):
     assert "tests/test_calc.py::test_add" in first.stdout
 
 
+def test_impact_forwards_pytest_options(tmp_path):
+    """Regression: pytest's own options must survive the CLI's argument parsing."""
+    _project(tmp_path)
+    (tmp_path / "tests" / "test_other.py").write_text(
+        "def test_other():\n    assert True\n", encoding="utf-8"
+    )
+    everything = _cli(tmp_path, "impact", "--policy", "off", "tests")
+    assert everything.returncode == 0, everything.stderr
+    assert "test_calc.py::test_add" in everything.stdout
+    assert "test_other.py::test_other" in everything.stdout
+
+    ignored = _cli(
+        tmp_path,
+        "impact",
+        "--policy",
+        "off",
+        "tests",
+        "--ignore=tests/test_other.py",
+    )
+    assert ignored.returncode == 0, ignored.stderr
+    assert "test_calc.py::test_add" in ignored.stdout
+    assert "test_other" not in ignored.stdout
+
+
 def test_clean_refuses_without_confirmation(tmp_path):
     _project(tmp_path)
     completed = _cli(tmp_path, "clean")
@@ -104,4 +128,3 @@ def test_report_renders_a_stored_json_report(tmp_path):
     html = _cli(tmp_path, "report", "--report", str(report), "--format", "html", "--output", str(tmp_path / "r.html"))
     assert html.returncode == 0
     assert "<svg" in (tmp_path / "r.html").read_text(encoding="utf-8")
-
