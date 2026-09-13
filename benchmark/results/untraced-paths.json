@@ -1,0 +1,52 @@
+{
+  "raw": {
+    "declared": {
+      "fast_changed_files": [
+        "app/cli.py"
+      ],
+      "fast_detected_failures": 2,
+      "fast_executed": 2,
+      "fast_reasons": {
+        "always-run": 2
+      },
+      "fast_selected": 2,
+      "ground_truth_failures": 2,
+      "tag": "declared",
+      "warm_dependency_edges": 2
+    },
+    "plain": {
+      "fast_changed_files": [
+        "app/cli.py"
+      ],
+      "fast_detected_failures": 1,
+      "fast_executed": 1,
+      "fast_reasons": {
+        "always-run": 1
+      },
+      "fast_selected": 1,
+      "ground_truth_failures": 2,
+      "tag": "plain",
+      "warm_dependency_edges": 2
+    }
+  },
+  "rows": [
+    {
+      "detected": 1,
+      "executed": 1,
+      "missed": 1,
+      "phase": "no declaration (dynamic tracing only)",
+      "real failures": 2,
+      "selected": 1,
+      "tests": 2
+    },
+    {
+      "detected": 2,
+      "executed": 2,
+      "missed": 0,
+      "phase": "@pytest.mark.risktest_always",
+      "real failures": 2,
+      "selected": 2,
+      "tests": 2
+    }
+  ]
+}

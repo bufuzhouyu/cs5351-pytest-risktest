@@ -1,0 +1,28 @@
+# Local state produced by the tool under test
+.risktest/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Benchmark scratch output (kept out of git, summary is committed instead)
+benchmark/subjects/_work/
+

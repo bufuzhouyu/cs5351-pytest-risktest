@@ -1,0 +1,62 @@
+{
+  "iterations": 150000,
+  "repeats": 5,
+  "rows": [
+    {
+      "workload": "hot-loop",
+      "strategy": "none",
+      "iterations": 150000,
+      "seconds": 0.0256,
+      "overhead_pct": 0.0
+    },
+    {
+      "workload": "hot-loop",
+      "strategy": "file",
+      "iterations": 150000,
+      "seconds": 0.0264,
+      "overhead_pct": 3.04
+    },
+    {
+      "workload": "hot-loop",
+      "strategy": "line-local",
+      "iterations": 150000,
+      "seconds": 1.6064,
+      "overhead_pct": 6169.82
+    },
+    {
+      "workload": "hot-loop",
+      "strategy": "line-global",
+      "iterations": 150000,
+      "seconds": 1.5747,
+      "overhead_pct": 6046.2
+    },
+    {
+      "workload": "library-bound",
+      "strategy": "none",
+      "iterations": 400,
+      "seconds": 0.0378,
+      "overhead_pct": 0.0
+    },
+    {
+      "workload": "library-bound",
+      "strategy": "file",
+      "iterations": 400,
+      "seconds": 0.0391,
+      "overhead_pct": 3.57
+    },
+    {
+      "workload": "library-bound",
+      "strategy": "line-local",
+      "iterations": 400,
+      "seconds": 0.0369,
+      "overhead_pct": -2.27
+    },
+    {
+      "workload": "library-bound",
+      "strategy": "line-global",
+      "iterations": 400,
+      "seconds": 0.0745,
+      "overhead_pct": 97.2
+    }
+  ]
+}
