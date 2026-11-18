@@ -48,7 +48,7 @@
 
 ## 1:40–2:15 开源基座与相关工作
 
-幻灯片：`pytest supplies the extension points and the ground truth`
+幻灯片：`pytest as the extension point and ground truth`
 
 旁白：
 
@@ -120,7 +120,7 @@
 
 ## 5:05–5:35 评测协议
 
-幻灯片：`The evaluation contract was frozen before measurement`
+幻灯片：`Evaluation contract frozen before measurement`
 
 旁白：
 
@@ -130,7 +130,7 @@
 
 ## 5:35–6:15 结果
 
-幻灯片：`Every verified failure was detected with 69% to 85% of the suite skipped`
+幻灯片：`69% to 85% skipped, every failure detected`
 
 旁白：
 
@@ -154,7 +154,7 @@
 
 ## 6:40–7:00 过程与结尾
 
-幻灯片：`Three sprints produced a tool, an evaluation and a reviewable process`
+幻灯片：`Three sprints, one reviewable process`
 
 旁白：
 
@@ -174,7 +174,7 @@
 4. pytest gives us the plug-in API and the ground truth; our contribution is explainable selection with a safety budget.
 5. The tool turns observed execution, static reachability and history into a reviewable plan.
 6. Three named policies make the precision and cost trade-off explicit.
-7. The evaluation contract was frozen before measurement.
+7. Evaluation contract frozen before measurement.
 8. Across 36 verified mutations, every failure was detected with 69% to 85% of the suite skipped.
 9. We measured two limits and changed the defaults because of them.
 10. Three sprints produced a working tool, a reproducible evaluation and a reviewable process.
