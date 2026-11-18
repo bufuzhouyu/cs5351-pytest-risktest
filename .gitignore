@@ -26,3 +26,6 @@ Thumbs.db
 # Benchmark scratch output (kept out of git, summary is committed instead)
 benchmark/subjects/_work/
 
+
+# Pytest basetemp used when running from the moved project folder
+.pytest-tmp*/

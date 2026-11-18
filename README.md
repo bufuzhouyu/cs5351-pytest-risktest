@@ -91,7 +91,7 @@ generated layered projects and this project itself (self-hosted).  Full detail:
 
 ```
 src/pytest_risktest/   plugin, monitor (PEP 669), graph, store, selector, flaky, metrics, report, CLI
-tests/                 96 tests: unit tests plus end-to-end plugin tests in subprocesses
+tests/                 99 tests: unit tests plus end-to-end plugin tests in subprocesses
 benchmark/             subject generator, mutation operators, harness, experiments, results
 scripts/               dev helper, burndown chart, store inspector, dependency-map exporter
 docs/                  assignment mapping, problem statement, requirements, architecture, process, report draft
@@ -113,6 +113,9 @@ docs/                  assignment mapping, problem statement, requirements, arch
 | [docs/08-trace-requirement-to-result.md](docs/08-trace-requirement-to-result.md) | requirement → code → test → evidence matrix |
 | [docs/process/](docs/process/) | sprint plans, weekly evidence, burndown |
 | [docs/report/report-draft.md](docs/report/report-draft.md) | final-report draft in the IEEE TSE structure |
+| [docs/report/presentation.pptx](docs/report/presentation.pptx) | 10-slide, 7-minute presentation deck |
+| [docs/report/narration-script.md](docs/report/narration-script.md) | timed narration script and recording checklist |
+| [scripts/demo.ps1](scripts/demo.ps1) | one-command live demo used in the recording |
 
 ## Development
 

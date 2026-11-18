@@ -519,7 +519,7 @@ affected tests, with the safety net in place from the first sprint.
 deferred local line strategy), the static import graph, the SQLite store with
 digest caching and change detection without git, the selection engine with
 policies, the always-run set and the stop rules, the pytest plug-in, the CLI, the
-first 96 automated tests, the benchmark harness, and the process documents
+first 99 automated tests, the benchmark harness, and the process documents
 (requirements, ADRs, evaluation contract, risk register).
 
 **Activities.** Stories were estimated in story points and tracked as issues; the
@@ -900,7 +900,7 @@ report are reproducible from these artefacts).
 | Artefact | Path |
 | --- | --- |
 | Tool source (2 212 lines) | `src/pytest_risktest/` |
-| Tests (96) | `tests/` |
+| Tests (99) | `tests/` |
 | Benchmark harness | `benchmark/run_bench.py`, `benchmark/mutate.py`, `benchmark/generate_subjects.py` |
 | Raw results | `benchmark/results/{benchmark.csv,benchmark.json,summary.md}` |
 | Experiments | `benchmark/experiments/{tracing_strategies.py,untraced_paths.py}` |

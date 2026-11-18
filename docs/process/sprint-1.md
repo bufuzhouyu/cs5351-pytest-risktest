@@ -32,6 +32,6 @@ Total 47 points, all complete in the repository state of 2026-09-14.
 **Evidence**
 
 * repository import with per-module commits
-* tests: 96 passing (`pytest tests -q`)
+* tests: 99 passing (`pytest tests -q`)
 * benchmark: `benchmark/results/summary.md` (36 runs)
 

@@ -39,6 +39,7 @@ def _project(root: Path) -> None:
         "from app.calc import add\n\n\ndef test_add():\n    assert add(1, 1) == 2\n",
         encoding="utf-8",
     )
+    (root / "pytest.ini").write_text("[pytest]\ntestpaths = tests\n", encoding="utf-8")
 
 
 def test_status_without_history(tmp_path):
@@ -88,7 +89,7 @@ def test_impact_forwards_pytest_options(tmp_path):
     )
     assert ignored.returncode == 0, ignored.stderr
     assert "test_calc.py::test_add" in ignored.stdout
-    assert "test_other" not in ignored.stdout
+    assert "tests/test_other.py::test_other" not in ignored.stdout
 
 
 def test_clean_refuses_without_confirmation(tmp_path):
@@ -128,3 +129,33 @@ def test_report_renders_a_stored_json_report(tmp_path):
     html = _cli(tmp_path, "report", "--report", str(report), "--format", "html", "--output", str(tmp_path / "r.html"))
     assert html.returncode == 0
     assert "<svg" in (tmp_path / "r.html").read_text(encoding="utf-8")
+
+def test_impact_dry_run_does_not_consume_the_change(tmp_path):
+    _project(tmp_path)
+    env = _env()
+    warm = subprocess.run(
+        [sys.executable, "-m", "pytest", "-q", "--no-header", "-p", "no:cacheprovider",
+         "-p", "pytest_risktest.plugin", "--risktest", "--risktest-policy=off",
+         "--risktest-report=.risktest/warm.json"],
+        cwd=str(tmp_path), env=env, capture_output=True, text=True, timeout=180,
+    )
+    assert warm.returncode == 0, warm.stdout + warm.stderr
+    (tmp_path / "app" / "calc.py").write_text(
+        "def add(a, b):\n    return a - b\n", encoding="utf-8"
+    )
+    import shutil
+    for cache in tmp_path.rglob("__pycache__"):
+        shutil.rmtree(cache, ignore_errors=True)
+    impact = _cli(tmp_path, "impact", "--policy", "fast")
+    assert impact.returncode == 0, impact.stderr
+    assert "app/calc.py" in impact.stdout
+    run = subprocess.run(
+        [sys.executable, "-m", "pytest", "-q", "--no-header", "-p", "no:cacheprovider",
+         "-p", "pytest_risktest.plugin", "--risktest", "--risktest-policy=fast",
+         "--risktest-report=.risktest/run.json"],
+        cwd=str(tmp_path), env=env, capture_output=True, text=True, timeout=180,
+    )
+    report = json.loads((tmp_path / ".risktest" / "run.json").read_text(encoding="utf-8"))
+    assert run.returncode != 0
+    assert report["changed_files"] == ["app/calc.py"]
+    assert report["failures"] == ["tests/test_calc.py::test_add"]

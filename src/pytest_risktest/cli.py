@@ -50,7 +50,7 @@ def collect_nodeids(root: Path, pytest_args: Sequence[str]) -> List[str]:
 
     collector = _Collector()
     pytest.main(
-        ["--collect-only", "-q", "-p", "no:cacheprovider", *pytest_args],
+        ["--collect-only", "-qq", "-p", "no:cacheprovider", f"--rootdir={root}", *pytest_args],
         plugins=[collector],
     )
     return collector.nodeids
@@ -61,9 +61,7 @@ def _load_state(root: Path, store_path: str):
     previous_py = store.file_digests("py")
     previous_config = store.file_digests("config")
     previous_lines = store.line_hash_map()
-    store.refresh_digests(with_lines=True)
-    current_py = store.file_digests("py")
-    current_config = store.file_digests("config")
+    current_py, current_config = store.refresh_digests(with_lines=True, commit=False)
     change = resolve_change(
         store=store,
         root=root,

@@ -69,6 +69,7 @@ def _make_project(pytester: pytest.Pytester) -> Path:
     (root / "tests").mkdir(parents=True, exist_ok=True)
     (root / "tests" / "test_calc.py").write_text(TEST_CALC, encoding="utf-8")
     (root / "tests" / "test_text.py").write_text(TEST_TEXT, encoding="utf-8")
+    (root / "pytest.ini").write_text("[pytest]\ntestpaths = tests\n", encoding="utf-8")
     return root
 
 

@@ -13,7 +13,7 @@ the whole repository.
 | 4 | Team of 5–8, at least two non-functional requirements, each addressed by an architectural design option with rationale | NFR-1 performance, NFR-2 reliability, NFR-3 scalability → `docs/04-architecture.md` ADR-1…ADR-7, each with measurements | done |
 | 4 | Agile with at least three cycles, weekly standing meeting, burndown chart | `docs/process/sprint-1..3.md`, `docs/process/burndown.csv`, `docs/report/figures/burndown.svg` | sprint plans + chart ready; weekly actuals to be maintained by the team |
 | 5 | Repository captures weekly activities as evidence | `.github/` templates, one issue per story, `CHANGELOG.md`, sprint evidence tables, CI workflow | templates and CI ready; team adds weekly entries |
-| 6 | Presentation + demo video (5 %) | `docs/report/presentation-outline.md` | outline ready; slides/video are team work |
+| 6 | Presentation + demo video (5 %) | `docs/report/presentation.pptx`, `docs/report/narration-script.md`, `scripts/demo.ps1` | deck, timed narration and live demo ready; recording is team work |
 | 6 | Final report (20 %) ~10 000 words, IEEE TSE structure | `docs/report/report-draft.md` (+ figures in `docs/report/figures/`) | technical sections drafted with real data |
 | 8 | Tool must help developers perform development tasks, not operate a deployed service | it selects/prioritises/runs tests and reports flakiness — a pre-deployment development activity | done |
 | 10 | Start from an operable open-source project or a project that allows plug-in development; best if related to a research paper | base = **pytest** (plugin API), problem from the test-selection / flakiness literature → `docs/02-open-source-base-and-related-work.md` | done |
@@ -37,7 +37,7 @@ the whole repository.
 ## What is already complete
 
 * a working tool (`src/pytest_risktest`, 2 212 lines) with an entry point, CLI and pytest plugin;
-* 96 automated tests, including ten end-to-end tests that drive the plugin in
+* 99 automated tests, including ten end-to-end tests that drive the plugin in
   real subprocesses and assert the safety properties;
 * a reproducible evaluation harness with four targets, verified mutations, three
   policies, 36 measured runs, and three dedicated experiments (tracing

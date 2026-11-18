@@ -199,3 +199,9 @@ def test_changed_lines_against_uses_recorded_snapshot(tmp_path):
         assert store.changed_lines_against(recorded, modified) == {2}
         assert store.changed_lines_against("", modified) == set()
 
+
+def test_recent_outcomes_carries_fingerprints(tmp_path):
+    with _store(tmp_path) as store:
+        store.record_outcomes("run1", {"t": "passed"}, {"t": 0.1}, {"t": "old"})
+        store.record_outcomes("run2", {"t": "failed"}, {"t": 0.1}, {"t": "new"})
+        assert store.recent_outcomes("t") == [("failed", "new"), ("passed", "old")]

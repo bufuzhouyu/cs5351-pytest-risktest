@@ -71,3 +71,14 @@ def test_flaky_candidates_and_summaries(tmp_path):
     }
     assert suspects_from_verdicts({"a": CONSISTENT_PASS, "b": ORDER_DEPENDENT}) == ["b"]
 
+
+def test_different_dependency_fingerprint_is_not_flaky(tmp_path):
+    store = Store(tmp_path / "s.sqlite3", tmp_path)
+    try:
+        store.record_outcomes("run1", {"t": "passed"}, {"t": 0.1}, {"t": "old"})
+        assert differential_findings(store, {"t": "failed"}, {"t": "new"}) == {}
+        assert differential_findings(store, {"t": "failed"}, {"t": "old"}) == {
+            "t": NONDETERMINISTIC
+        }
+    finally:
+        store.close()

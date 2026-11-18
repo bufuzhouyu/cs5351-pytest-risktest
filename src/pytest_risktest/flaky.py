@@ -66,8 +66,8 @@ def differential_findings(
         fingerprint = fingerprints.get(nodeid)
         if not fingerprint:
             continue
-        for previous_status in store.recent_statuses(nodeid, history_limit):
-            if previous_status != status:
+        for previous_status, previous_fingerprint in store.recent_outcomes(nodeid, history_limit):
+            if previous_fingerprint == fingerprint and previous_status != status:
                 findings[nodeid] = NONDETERMINISTIC
                 break
     return findings

@@ -218,7 +218,9 @@ class Store:
     def _is_config(self, rel: str) -> bool:
         return Path(rel).name in CONFIG_FILENAMES and not rel.endswith(".py")
 
-    def refresh_digests(self, extra_files: Sequence[Path] = (), with_lines: bool = False) -> None:
+    def refresh_digests(
+        self, extra_files: Sequence[Path] = (), with_lines: bool = False, commit: bool = True
+    ) -> Optional[Tuple[Dict[str, str], Dict[str, str]]]:
         """Re-hash files whose ``(size, mtime_ns)`` changed since the last run."""
         previous_lines = {
             row["path"]: row["line_hashes"]
@@ -268,6 +270,11 @@ class Store:
                 except OSError:
                     line_hashes = previous_lines.get(rel, "")
             rows.append((rel, digest, stat.st_size, stat.st_mtime_ns, kind, line_hashes))
+        if not commit:
+            return (
+                {rel: digest for rel, digest, _s, _m, kind, _l in rows if kind == "py"},
+                {rel: digest for rel, digest, _s, _m, kind, _l in rows if kind == "config"},
+            )
         with self._conn:
             # A temp table avoids SQLite's parameter-count limit on large trees.
             self._conn.execute("CREATE TEMP TABLE IF NOT EXISTS seen_paths(path TEXT PRIMARY KEY)")
@@ -286,6 +293,7 @@ class Store:
                 rows,
             )
             self._conn.execute("INSERT OR REPLACE INTO meta(key, value) VALUES ('scan_ts', ?)", (str(now),))
+        return None
 
     def line_hash_map(self) -> Dict[str, str]:
         """Recorded per-line fingerprints, keyed by relative path."""
@@ -449,6 +457,16 @@ class Store:
                 fingerprint=row["fingerprint"],
             )
         return states
+
+    def recent_outcomes(self, nodeid: str, limit: int = 5) -> List[Tuple[str, Optional[str]]]:
+        """Recent ``(status, fingerprint)`` pairs, newest first."""
+        return [
+            (row["status"], row["fingerprint"])
+            for row in self._conn.execute(
+                "SELECT status, fingerprint FROM outcomes WHERE nodeid = ? ORDER BY id DESC LIMIT ?",
+                (nodeid, limit),
+            )
+        ]
 
     def recent_statuses(self, nodeid: str, limit: int = 5) -> List[str]:
         return [

@@ -6,7 +6,13 @@ also how the benchmark harness invokes it.
 
 from __future__ import annotations
 
+import os
 import sys
+
+# Child pytest processes must emit UTF-8 even on a GBK console, otherwise
+# pytester cannot decode their output when the workspace path contains CJK text.
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+os.environ.setdefault("PYTHONUTF8", "1")
 from pathlib import Path
 
 SRC = Path(__file__).resolve().parents[1] / "src"
