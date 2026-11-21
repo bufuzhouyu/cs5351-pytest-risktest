@@ -8,7 +8,10 @@ which project files each test really exercises, and then uses that evidence to r
 failure behind its own skip decisions.
 
 This repository is the CS5351 Software Engineering course project (team
-`<team name>`, project `<project name>`).  See
+`<team name>`, project `pytest-risktest`).  The team is Zhao Zun 赵尊
+(lead, `@bufuzhouyu`), Dai Jiale 代佳乐 (`@lele2204`), Xiao Yu 肖宇
+(`@kaito-hqs`), Zhang Liyuan 张力元 (`@Yuan07292003`), Zhuang Zhiyang
+庄志洋 (`@f-zhuang`) and Zhou Haoran 周浩然 (`@Cyanova-zhou`).  See
 [docs/00-assignment-mapping.md](docs/00-assignment-mapping.md) for the mapping
 between the course requirements and the artefacts in this repository.
 
@@ -114,8 +117,9 @@ docs/                  assignment mapping, problem statement, requirements, arch
 | [docs/process/](docs/process/) | sprint plans, weekly evidence, burndown |
 | [docs/report/report-draft.md](docs/report/report-draft.md) | final-report draft in the IEEE TSE structure |
 | [docs/report/presentation.pptx](docs/report/presentation.pptx) | 10-slide, 7-minute presentation deck |
-| [docs/report/narration-script.md](docs/report/narration-script.md) | timed narration script and recording checklist |
-| [scripts/demo.ps1](scripts/demo.ps1) | one-command live demo used in the recording |
+| [docs/report/narration-script.md](docs/report/narration-script.md) | timed script for the offline presentation and run-through checklist |
+| [scripts/demo.ps1](scripts/demo.ps1) | one-command live demo used in the offline presentation |
+| [TEAM.md](TEAM.md) | team roster, roles and GitHub handles |
 
 ## Development
 

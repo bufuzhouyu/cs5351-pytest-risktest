@@ -4,12 +4,12 @@ Sprint 2 activities plus automated testing, debugging and maintenance support.
 
 | Story | Points | Owner | Planned outcome | Status |
 | --- | --- | --- | --- | --- |
-| End-to-end acceptance suite in CI (subprocess plugin runs) | 5 | R1 | the ten integration tests run on every push | tests written and wired to CI |
-| Boundary experiment (untraced paths) + escape-hatch documentation | 5 | R2 | the limitation is measured, not assumed | done |
-| Maintenance: `risktest clean/status`, store recovery, troubleshooting guide | 3 | R2 | a new user can recover a broken state | CLI done; guide to write |
-| Evaluation re-run and report §7 | 8 | R3 | frozen protocol, all numbers regenerated | first run done; re-run after sprint 2 landings |
-| Presentation + demo video | 5 | ALL | 7-minute narrative, live end-to-end demo | outline ready |
-| Report assembly in the IEEE TSE template | 8 | ALL | section owners, one editor | draft ready |
+| End-to-end acceptance suite in CI (subprocess plugin runs) | 5 | 代佳乐 (M2) | the ten integration tests run on every push | tests written and wired to CI |
+| Boundary experiment (untraced paths) + escape-hatch documentation | 5 | 代佳乐 (M2) | the limitation is measured, not assumed | done |
+| Maintenance: `risktest clean/status`, store recovery, troubleshooting guide | 3 | 肖宇 (M3) | a new user can recover a broken state | CLI done; guide to write |
+| Evaluation re-run and report §7 | 8 | 张力元 (M4) | frozen protocol, all numbers regenerated | first run done; re-run after sprint 2 landings |
+| Offline presentation + live demo | 5 | 庄志洋 (M5) | 7-minute talk, live end-to-end demo, backup screenshots | deck and script ready; rehearsal needed |
+| Report assembly in the IEEE TSE template | 8 | 周浩然 (M6) | section owners, one editor | draft ready |
 | Process self-reflection | 3 | ALL | what the team would change next time | to write |
 
 **Demo plan (frozen, no future features)**

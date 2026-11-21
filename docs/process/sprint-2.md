@@ -6,13 +6,13 @@ is updated during the sprint reviews.
 
 | Story | Points | Owner | Planned outcome | Status |
 | --- | --- | --- | --- | --- |
-| US-6 risk ordering with APFD evidence | 5 | R1 | ordering beats collection order on the frozen targets | metric implemented; re-run in sprint 3 |
-| US-7 differential flakiness + `flaky-check` | 8 | R2 | order-dependent tests flagged and reproducible | implemented |
-| Line-granularity experiment and ADR-2 update | 5 | R3 | local vs global instrumentation measured | done |
+| US-6 risk ordering with APFD evidence | 5 | 赵尊 (M1) | ordering beats collection order on the frozen targets | metric implemented; re-run in sprint 3 |
+| US-7 differential flakiness + `flaky-check` | 8 | 代佳乐 (M2) | order-dependent tests flagged and reproducible | implemented |
+| Line-granularity experiment and ADR-2 update | 5 | 赵尊 (M1) | local vs global instrumentation measured | done |
 | Code quality: type hints, docstrings, dead code removal | 3 | ALL | review checklist applied to every module | to be scheduled |
-| Refactor: policies as data, stop rules configurable | 3 | R1 | adding a policy needs no engine change | done |
-| Extend the benchmark to the self-hosted target | 5 | R3 | a real suite in the study | done |
-| Related-work reading notes (TIA, predictive selection, flakiness) | 5 | ALL | report §2 material | draft in `docs/02-...md`; team expands |
+| Refactor: policies as data, stop rules configurable | 3 | 赵尊 (M1) | adding a policy needs no engine change | done |
+| Extend the benchmark to the self-hosted target | 5 | 张力元 (M4) | a real suite in the study | done |
+| Related-work reading notes (TIA, predictive selection, flakiness) | 5 | 肖宇 (M3) | report §2 material | draft in `docs/02-...md`; team expands |
 
 **Planned sprint review questions**
 

@@ -184,6 +184,7 @@ The final report's contribution table should use the same data.
 | `push` asks for a password | GitHub no longer accepts account passwords | Use Git Credential Manager, a PAT, or GitHub Desktop |
 | CI fails on Windows only | Path or encoding assumption | Set `PYTHONIOENCODING=utf-8`; the tests already do this for child processes |
 | The repository grows quickly | Generated reports or caches committed | Add `out/`, `.risktest/`, `.pytest_cache/` to `.gitignore` |
+| Desktop warns about LF/CRLF conversion | Global `core.autocrlf=true` conflicts with LF files | Keep `.gitattributes` (`text eol=lf`, `*.ps1 eol=crlf`, binaries `binary`) and the repo-local `core.autocrlf=false`; commit normally, never discard changes |
 | A member has commits but no reviews | Only coding was counted | Have them review one pull request and record it |
 
 ## 8. Presentation-week checklist

@@ -12,9 +12,18 @@
 
 提交（commit）是"拍一张本地快照"，推送（push）是"把快照上传到 GitHub"。
 
+## 当前仓库状态（2026-11-21）
+
+- 六位成员、学号、GitHub 用户名和分工已写入 `TEAM.md` 和报告。
+- 最终考核改为线下 Pre，不再录制视频；M5 负责 PPT、现场演示和彩排。
+- 换行符已统一：文本文件用 LF，三个 PowerShell 脚本用 CRLF，PPT/图片按二进制处理。
+- 队长已经完成一次提交 `cc21433`（`bufuzhouyu` 账号）。剩下的改动在 Desktop 里提交后 Push 即可。
+
 ---
 
 ## 第一部分：队长 30 分钟
+
+如果仓库已经 Publish（当前就是这个状态），第 1–3 步不用重做，直接从第 4 步开始。第 1–3 步只在第一次建仓库时做一次。
 
 ### 1. 注册 GitHub
 
@@ -36,29 +45,39 @@
 3. 点 **Add repository**。
 4. 左侧出现 **Changes**，说明它识别到了本地仓库。
 
-### 4. 第一次提交（你的第一条工作记录）
+### 4. 提交当前改动
 
-在 GitHub Desktop 左侧勾选下面这些文件（保留 `out/` 不勾，它已经被忽略）：
+在 GitHub Desktop 左侧点 **Changes**，确认列表里包含这些文件（如果某次提交已经包含过，就不会再出现）：
 
-- `.gitignore`
+- `.gitattributes`
 - `TEAM.md`
-- `README.zh-CN.md`
+- `README.md`、`README.zh-CN.md`
 - `docs/09-topic-introduction-for-ta.md`
-- `docs/10-github-team-workflow.md`
-- `docs/11-github-desktop-beginner-guide.md`
+- `docs/10-github-team-workflow.md`、`docs/11-github-desktop-beginner-guide.md`、`docs/12-github-desktop-english-cheatsheet.md`
 - `docs/process/two-week-plan.md`
+- `docs/report/presentation.pptx`、`narration-script.md`、`presentation-outline.md`
 - `scripts/check-team-records.ps1`
+
+**不要勾选** `out/`、`.risktest/`、`.pytest_cache/`、`__pycache__/`。这些是生成文件，已经被 `.gitignore` 忽略。
 
 在左下角填写：
 
-- **Summary**：`chore: add team roster and two-week plan`
-- **Description**：`Adds team roles, GitHub workflow, beginner guide and the schedule up to the presentation.`
+- **Summary**：`chore: normalize line endings and finalize offline presentation`
+- **Description**：`Adds .gitattributes, team member details, the offline presentation script and the updated deck cover.`
 
 点 **Commit to main**。
 
+如果这是你第一次建仓库，Summary 改成 `chore: add team roster and two-week plan` 也可以。提交说明只要能让别人看懂这次改了什么就行。
+
 ### 5. 发布到 GitHub
 
-1. 顶部会出现 **Publish repository**，点击。
+如果仓库还没发布：顶部会出现 **Publish repository**，点击。
+
+如果仓库已经发布过：顶部会显示 **Push origin**，点它即可。
+
+首次发布按下面做：
+
+1. 点 **Publish repository**。
 2. **Name** 填 `cs5351-pytest-risktest`。
 3. 如果课程要求公开就取消勾选 **Keep this code private**，否则保持私有。
 4. 点 **Publish repository**。
@@ -83,6 +102,21 @@
 - 保存
 
 这样每个人都要走"开分支 → 提 PR → 别人审核 → 合并"的流程。
+
+### 8. 换行符提示（LF/CRLF）
+
+如果 Desktop 提示 *This file uses 'LF' line endings, but Git is configured to convert them to 'CRLF'*，这不是错误。
+
+它的意思是：文件现在用 LF，Windows 的 Git 想把检出后的文件改成 CRLF。两个人分别用 Windows 和 Linux 时，这种转换会让同一个文件显示成"整份都改了"，所以我们在仓库里统一了规则：
+
+- 新增 `.gitattributes`：所有文本文件用 LF；
+- `*.ps1`、`*.bat`、`*.cmd` 用 CRLF；
+- `*.pptx`、`*.xlsx`、图片按二进制，不做任何转换；
+- 仓库本地设置 `core.autocrlf=false`，不再自动转换。
+
+正常提交即可，不会影响代码。**不要点 Discard changes**，那会丢掉你还没提交的修改。也不要安装第三方"换行符修复工具"。
+
+如果提示再次出现，先关掉 Desktop 再打开。仍然出现就把提示发到群里，不要自己乱改全局 Git 设置。
 
 ---
 
@@ -156,7 +190,7 @@
    验收：更新 `benchmark/results/summary.md` 和图表，并写一段结果解释。
 
 5. **M5 汇报**：`presentation: final deck and seven-minute offline live demo`
-   验收：视频不超过 7 分钟，包含完整演示，彩排计时记录在 PR 里。
+   验收：现场讲解与演示合计不超过 7 分钟，彩排计时和备用截图记录在 PR 里。
 
 6. **M6 报告**：`report: IEEE TSE formatting, bios and contribution table`
    验收：报告含 6 人简介、self-reflection、贡献表和全部图表。
@@ -169,6 +203,7 @@
 - **做完一小步**：Commit 一次，Summary 用一句话说清楚。
 - **完成一个任务**：Push → PR → 找人 review → 合并。
 - **每周日**：更新 `docs/process/weekly-evidence.md`，写清本周谁做了什么、对应哪个 Issue/PR。
+- **提交前**：确认 Changes 里没有 `out/`、`.risktest/`、`.pytest_cache/`、`__pycache__/`；确认没有 LF/CRLF 提示。
 - **提交前检查**：
 
 ```powershell
@@ -181,6 +216,9 @@
 
 **Q：GitHub Desktop 显示 "No local changes"，但我改了文件？**
 确认你改的是 `Clone` 下来的那个文件夹，不是桌面上的旧副本。
+
+**Q：Desktop 提示 "This file uses 'LF' line endings..." 怎么办？**
+这不是错误，见第一部分第 8 节。仓库已经用 `.gitattributes` 统一了换行符：文本用 LF，PowerShell 脚本用 CRLF，PPT 和图片按二进制处理。直接正常提交即可，不要点 **Discard changes**，也不要安装第三方换行符修复工具。如果重启 Desktop 后仍然出现，把提示发到群里。
 
 **Q：Push 失败，提示 rejected？**
 别人先合并了新内容。点 **Fetch origin → Pull origin**，解决冲突后再 push。第一次遇到冲突就找队长一起看，不要强推。

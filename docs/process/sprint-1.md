@@ -7,14 +7,14 @@ uses them to run only the affected tests, with the safety net in place.
 
 | Story | Points | Owner | Acceptance criteria | Status |
 | --- | --- | --- | --- | --- |
-| US-1 trace tests to files | 8 | R1 | dependency edges exist per executed test | done |
-| US-2 select only affected tests | 8 | R1 | changed module → only its tests run | done |
-| US-3 safety net for unknown/failing/flaky tests | 5 | R2 | always-run set proven by unit tests | done |
-| US-8 zero-dependency operation + CLI | 5 | R2 | `risktest status/impact/report/clean` work | done |
-| NFR-1 PEP 669 monitor | 8 | R3 | overhead measured, not asserted | done |
-| NFR-3 store design (SQLite, pruning, digest cache) | 5 | R3 | bounded state, change detection without git | done |
-| Risk register, evaluation contract, ADRs | 5 | TL | documents reviewed and dated | done |
-| Weekly evidence + issue/PR templates + CI | 3 | ALL | templates and workflow in place | done |
+| US-1 trace tests to files | 8 | 赵尊 (M1) | dependency edges exist per executed test | done |
+| US-2 select only affected tests | 8 | 赵尊 (M1) | changed module → only its tests run | done |
+| US-3 safety net for unknown/failing/flaky tests | 5 | 代佳乐 (M2) | always-run set proven by unit tests | done |
+| US-8 zero-dependency operation + CLI | 5 | 代佳乐 (M2) | `risktest status/impact/report/clean` work | done |
+| NFR-1 PEP 669 monitor | 8 | 赵尊 (M1) | overhead measured, not asserted | done |
+| NFR-3 store design (SQLite, pruning, digest cache) | 5 | 代佳乐 (M2) | bounded state, change detection without git | done |
+| Risk register, evaluation contract, ADRs | 5 | 周浩然 (M6) | documents reviewed and dated | done |
+| Weekly evidence + issue/PR templates + CI | 3 | 肖宇 (M3), 赵尊 (M1) | templates and workflow in place | done |
 
 Total 47 points, all complete in the repository state of 2026-09-14.
 
@@ -26,8 +26,9 @@ Total 47 points, all complete in the repository state of 2026-09-14.
 * Risk found: the first benchmark design produced mutations that killed no test
   and let consecutive policy runs share state (R-7).  Fixed by a kill check and a
   store snapshot/restore, and recorded in the risk register rather than deleted.
-* Owner names (`R1`, `R2`, `R3`, `TL`) are placeholders to be replaced with the
-  team's real member names at the first review.
+* Owners above are the agreed role assignments.  The report's contribution table
+  records the hours each member actually spent; adjust the sprint log if the real
+  distribution differs.
 
 **Evidence**
 

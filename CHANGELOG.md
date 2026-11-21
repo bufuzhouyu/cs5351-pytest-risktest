@@ -8,9 +8,9 @@ CS5351: three sprints of four weeks.
 ### Presentation and hardening (2026-11-18)
 
 * Added the ten-slide presentation deck (docs/report/presentation.pptx).
-* Added the timed seven-minute narration script (docs/report/narration-script.md).
-* Added scripts/demo.ps1, a one-command live demo used in the recording.
-* isktest impact is now a read-only dry run and no longer consumes the detected change.
+* Added the timed seven-minute offline presentation script (docs/report/narration-script.md).
+* Added scripts/demo.ps1, a one-command live demo used in the offline presentation.
+* The `risktest impact` command is now a read-only dry run and no longer consumes the detected change.
 * Differential flakiness now requires an identical dependency fingerprint, so a real regression is not labelled flaky.
 * Child pytest processes use UTF-8 output, and generated test projects pin their own rootdir.
 
