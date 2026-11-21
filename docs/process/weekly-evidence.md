@@ -11,7 +11,7 @@ blank on purpose — the team fills them as the work happens.
 | 2 | 2026-09-14 | ALL | #2… | initial import: plugin, monitor, graph, store, selector, tests | 96 tests passing; benchmark harness; evaluation contract frozen | R-7 found and fixed (benchmark validity) |
 | 3 | | | | | | |
 | 4 | | | | | | |
-| 5 | | | | | | |
+| 5 | 2026-11-21 | 代佳乐 (M2) | #1 M2 regression tests | PR #3 (commits `7f5f57a`, `5b87a21`) | `tests/test_selector_extra.py` 新增 22 个用例；完整套件 121 passed（基线 99）；覆盖率 62%，排除子进程模块后 89.6%；`docs/process/test-report.md` 填真实数字 | 未修改 `src/`；未发现缺陷 |
 | 6 | | | | | | |
 | 7 | | | | | | |
 | 8 | | | | | | |
