@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["main", "master", "sprint/**"]
+    branches: ["main", "master", "sprint/**", "sprint-*/**"]
   pull_request:
 
 jobs:
