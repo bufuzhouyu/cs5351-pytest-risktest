@@ -2,7 +2,7 @@
 
 **Team name:** `<team name>` (to be confirmed)
 **Project:** pytest-risktest
-**Repository:** `<https://github.com/bufuzhouyu/cs5351-pytest-risktest>`
+**Repository:** https://github.com/bufuzhouyu/cs5351-pytest-risktest
 **Course:** CS5351 Software Engineering
 
 Each member adds their own row in a separate commit, then opens a pull request.
