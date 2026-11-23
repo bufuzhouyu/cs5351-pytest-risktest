@@ -36,6 +36,25 @@ Presentation: 7 minutes, slides plus a live terminal demo. No video.
 
 Ran the Python steps from `scripts/demo.ps1` with Python 3.12.16 and pytest 9.2.0 in a temporary copy of `benchmark/subjects/subject_01`. Run all steps from the temporary subject root so collection and the impact command use the same test IDs.
 
+```sh
+# Start at the repository root with Python 3.12 and pytest available.
+repo="$PWD"
+work="$(mktemp -d /private/tmp/cs5351-m5-demo.XXXXXX)"
+cp -R "$repo/benchmark/subjects/subject_01/." "$work/"
+cd "$work"
+export PYTHONPATH="$repo/src:$work" PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1
+python -m pytest -q -p no:cacheprovider -p pytest_risktest.plugin \
+  --risktest --risktest-policy=off --risktest-report=.risktest/warm.json tests
+perl -pi -e 's/WEIGHT = \d+/WEIGHT = 1/' app/features/feature_02.py
+python -m pytest_risktest impact --root "$work" --policy safe --limit 8 tests
+python -m pytest -q -p no:cacheprovider -p pytest_risktest.plugin \
+  --risktest --risktest-policy=safe --risktest-report=.risktest/run.json tests
+python -m pytest_risktest report --report .risktest/run.json --format markdown
+```
+
+The selective pytest command is expected to exit with status 1 because the
+temporary change causes two test failures.
+
 ```text
 Warm-up: 88 passed
 Safe impact plan: 8/88 selected, 80 deselected (90.9%)
