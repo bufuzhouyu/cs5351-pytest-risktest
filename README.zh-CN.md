@@ -91,6 +91,8 @@ docs/                  作业对应关系、问题陈述、需求、架构、过
 
 ## 文档
 
+[英文 README](README.md) · [常见问题与排错](docs/13-troubleshooting.md)
+
 | 文档 | 内容 |
 | --- | --- |
 | [docs/00-assignment-mapping.md](docs/00-assignment-mapping.md) | 每一条课程要求 → 在何处得到满足 |
