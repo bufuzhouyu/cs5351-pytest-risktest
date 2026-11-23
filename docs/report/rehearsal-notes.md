@@ -2,9 +2,19 @@
 
 Format: five-minute presentation with slides and a live demo, followed by two minutes of Q&A.
 
-No timed rehearsals had taken place as of November 23, 2026. The team will
-schedule its own practice and presentation setup. The macOS preflight below
-records the technical verification completed for this handoff.
+The team will schedule its own practice and presentation setup. The macOS
+preflight below records the technical verification completed for this handoff.
+
+## Timing supplied by the presenter
+
+These timings are unverified. Talk duration includes the demo. Q&A is tracked
+separately and no Q&A timing was supplied.
+
+| Round | Talk duration | Demo duration | Issue reported |
+| --- | --- | --- | --- |
+| 1 | 8:00 | 5:00 | The demo script was too long. |
+| 2 | 7:00 | 3:00 | The conclusion repeated earlier points. |
+| 3 | 5:00 | 2:00 | No issue was reported. |
 
 ## Target timing
 
