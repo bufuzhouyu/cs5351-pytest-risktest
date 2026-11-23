@@ -29,3 +29,4 @@ One entry per week: date, attendees, decisions, blockers, next action with owner
 | --- | --- | --- | --- | --- |
 | 1 | | | | |
 | 2 | | | | |
+
