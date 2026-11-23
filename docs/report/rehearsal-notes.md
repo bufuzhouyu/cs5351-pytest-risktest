@@ -1,22 +1,19 @@
 # Offline presentation rehearsal notes
 
-Presentation: 7 minutes, slides plus a live terminal demo. No video.
+Format: five-minute presentation with slides and a live demo, followed by two minutes of Q&A.
 
-| Rehearsal | Date | Room/equipment | Total time | Demo time | Problems | Fix |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | | | | | | |
-| 2 | | | | | | |
-| 3 | | | | | | |
+No timed rehearsals had taken place as of November 23, 2026. The team will
+schedule its own practice and presentation setup. The macOS preflight below
+records the technical verification completed for this handoff.
 
 ## Target timing
 
-- 0:00–0:35 opening
-- 0:35–1:15 problem and constraints
-- 1:15–2:15 solution
-- 2:15–4:45 live demo
-- 4:45–5:50 evaluation
-- 5:50–6:35 limits and process
-- 6:35–7:00 close
+- 0:00–0:40 problem and constraints
+- 0:40–1:30 solution
+- 1:30–3:00 live demo
+- 3:00–4:15 evaluation and limits
+- 4:15–5:00 conclusion
+- 5:00–7:00 Q&A
 
 ## Backup plan
 
@@ -26,9 +23,8 @@ Presentation: 7 minutes, slides plus a live terminal demo. No video.
 
 ## Verification
 
-- [ ] Record actual total and demo times for three complete rehearsals, including problems and fixes.
-- [ ] Complete a rehearsal within 7:00.
-- [ ] Record the command output, including the expected `2 failed` result.
+- [x] Capture macOS preflight output, including the expected `2 failed` result.
+- [ ] Time the five-minute talk and two-minute Q&A during team practice.
 - [ ] Verify the five backup screenshots open offline on the presentation laptop.
 - [ ] Check projection and terminal font size on the presentation laptop during the November 30 walkthrough.
 
@@ -73,6 +69,5 @@ the session.
 
 ## Deck and narration
 
-- Reviewed the ten-slide deck and the seven-minute narration for the live-demo handoff. Start the demo at 2:15 and return to the evaluation slide by 4:45.
-- The current deck still uses the 36-run evaluation baseline. The M4 rerun in PR #13 reports 48 runs. Confirm which figures the team freezes and align the deck and narration before the November 28 rehearsal.
-- Use the first rehearsal to measure the full talk, the second to practice switching to the offline visuals, and the third to verify the final timing after any cuts. Record the actual duration and any issues after each run.
+- Use the five-minute rundown in [demo-cues.md](demo-cues.md) for the presentation.
+- The existing deck cites the 36-run baseline. M4 PR #13 reports 48 runs. Confirm the team's frozen figures before presenting.

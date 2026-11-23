@@ -20,14 +20,24 @@ On the Windows presentation laptop, run `.\scripts\demo.ps1` from the repository
   4. `04-failures.png` — the two failure entries.
   5. `05-report.png` — the generated report.
 
-## Demo timing
+## Five-minute presentation
 
-| Presentation time | Show | Say |
+| Time | Show | Say |
 | --- | --- | --- |
-| 2:15–2:40 | Warm-up | The baseline runs all 88 tests and records test traces. |
-| 2:40–3:00 | Code change | Change the feature weight from 3 to 1 in the temporary subject. |
-| 3:00–3:30 | Selection plan | Point to one selected test and its reason. |
-| 3:30–4:05 | Selected run and failure list | Read the actual test totals and show the two failure entries. |
-| 4:05–4:45 | Report | Show where the report records the selected tests and their results. |
+| 0:00–0:40 | Problem and constraints | Running every test after every small change slows feedback. We use dependency evidence to select tests, with safeguards for incomplete traces. |
+| 0:40–1:30 | Approach and policies | pytest records which files each test executes. RiskTest combines those traces with the import graph. The safe policy follows transitive dependencies and keeps tests whose evidence is missing. |
+| 1:30–1:50 | Warm-up and mutation | All 88 tests pass in the temporary subject. We change one feature's weight from 3 to 1. |
+| 1:50–2:15 | Selection plan | Safe selects eight tests. Seven directly depend on the changed file and one is included through the import graph. |
+| 2:15–2:45 | Selective run and failures | Eight tests run and 80 are deselected. Two tests detect the intentional regression. |
+| 2:45–3:00 | Report | Point to the changed file, selection reasons, and two failing tests. |
+| 3:00–4:15 | Evaluation and limits | Use the team's frozen benchmark figures. Mention trace overhead and the subprocess blind spot. |
+| 4:15–5:00 | Conclusion | Summarize the selection trade-off and hand over to Q&A. |
+| 5:00–7:00 | Q&A | Keep the report open for questions about selection evidence. |
 
-If a demo step stalls, open the matching screenshot and continue through the remaining screenshots. Resume the slides by 4:45.
+If the terminal stalls, open the matching backup image. Return to the slides by 3:00 and begin Q&A at 5:00.
+
+## Q&A prompts
+
+- **Why were eight tests selected?** Seven directly depended on the changed file, and one was included through the import graph.
+- **Why did two tests fail?** The intentional weight change broke two assertions. The full warm-up passed before the change.
+- **When can traces miss dependencies?** Subprocess execution can be invisible to the tracer. Mark affected tests to always run.
