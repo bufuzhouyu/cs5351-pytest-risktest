@@ -5,18 +5,18 @@ list, the project number and the chosen project.  This document holds the short
 introduction that was sent, so the topic request itself is part of the repository
 evidence.
 
-The member list is complete.  Only `<team name>` and `<project number>` remain to
-be confirmed before this email is sent.
+The team name is **Code Group 18 Default** and the project number is **18**.
+If Canvas shows a different project number, update this line before sending.
 
 ---
 
 ## Email (send this)
 
-**Subject:** CS5351 project topic for review — Team `<team name>` (project `<project number>`)
+**Subject:** CS5351 project topic for review — Team Code Group 18 Default (project 18)
 
 Dear TA,
 
-Our team is Team `<team name>` (project `<project number>`; members:
+Our team is Team Code Group 18 Default (project 18; members:
 Zhao Zun 赵尊 72610823, Dai Jiale 代佳乐 72612080, Xiao Yu 肖宇 72610896,
 Zhang Liyuan 张力元 72610454, Zhuang Zhiyang 庄志洋 72610571,
 Zhou Haoran 周浩然 72610429).

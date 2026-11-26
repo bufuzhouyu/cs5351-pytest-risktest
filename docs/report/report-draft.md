@@ -1,6 +1,6 @@
 # Risk-Aware Test Selection, Prioritisation and Flakiness Triage for pytest
 
-**Team name:** `<team name>` · **Project name:** `pytest-risktest` · **Course:** CS5351 Software Engineering
+**Team name:** `Code Group 18 Default` · **Project name:** `pytest-risktest` (project number 18) · **Course:** CS5351 Software Engineering
 
 **Members (student ID, not EID):**
 

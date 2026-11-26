@@ -8,7 +8,7 @@ which project files each test really exercises, and then uses that evidence to r
 failure behind its own skip decisions.
 
 This repository is the CS5351 Software Engineering course project (team
-`<team name>`, project `pytest-risktest`).  The team is Zhao Zun 赵尊
+`Code Group 18 Default`, project `pytest-risktest`).  The team is Zhao Zun 赵尊
 (lead, `@bufuzhouyu`), Dai Jiale 代佳乐 (`@lele2204`), Xiao Yu 肖宇
 (`@kaito-hqs`), Zhang Liyuan 张力元 (`@Yuan07292003`), Zhuang Zhiyang
 庄志洋 (`@f-zhuang`) and Zhou Haoran 周浩然 (`@Cyanova-zhou`).  See
