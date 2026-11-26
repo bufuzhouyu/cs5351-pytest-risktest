@@ -14,7 +14,7 @@ blank on purpose — the team fills them as the work happens.
 | 5 | 2026-10-05 | 代佳乐 (M2) | #1 M2 regression tests | PR #3 (commits `7f5f57a`, `5b87a21`, `ee764c7`) | `tests/test_selector_extra.py` 新增 22 个用例；完整套件 121 passed（基线 99）；覆盖率 62%，排除子进程模块后 89.6%；`docs/process/test-report.md` 填真实数字 | 未修改 `src/`；未发现缺陷 |
 | 6 | | | | | | |
 | 7 | | | | | | |
-| 8 | | | | | | |
+| 8 | 2026-11-22 | 张力元 (M4) | [#9](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/9) | [PR #13](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/13), commit [`34c6da4`](https://github.com/bufuzhouyu/cs5351-pytest-risktest/commit/34c6da4) | [跑测记录](benchmark-rerun-2026-11.md)，4 个目标 × 4 个变异 × 3 种策略，48 次运行漏报为 0；完整测试 121 passed | 默认 seed 出现重复变异，使用 20260102 |
 | 9 | | | | | | |
 | 10 | | | | | | |
 | 11 | | | | | | |

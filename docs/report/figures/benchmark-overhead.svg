@@ -2,16 +2,16 @@
 <rect width="640" height="320" fill="#ffffff"/>
 <text x="320" y="20" text-anchor="middle" font-size="14" font-weight="600" fill="#1a202c">Tracing overhead (file granularity, %)</text>
 <line x1="48" y1="248" x2="624" y2="248" stroke="#a0aec0" stroke-width="1"/>
-<rect x="76.8" y="139.9" width="86.4" height="108.1" fill="#2b6cb0" rx="2"/>
-<text x="120.0" y="133.9" text-anchor="middle" font-size="11" fill="#2d3748">-8.53</text>
+<rect x="76.8" y="160.0" width="86.4" height="88.0" fill="#2b6cb0" rx="2"/>
+<text x="120.0" y="154.0" text-anchor="middle" font-size="11" fill="#2d3748">11.74</text>
 <text x="120.0" y="264.0" text-anchor="end" font-size="11" fill="#4a5568" transform="rotate(-35 120.0 264.0)">subject_01</text>
-<rect x="220.8" y="244.2" width="86.4" height="3.8" fill="#2b6cb0" rx="2"/>
-<text x="264.0" y="238.2" text-anchor="middle" font-size="11" fill="#2d3748">-0.30</text>
+<rect x="220.8" y="151.5" width="86.4" height="96.5" fill="#2b6cb0" rx="2"/>
+<text x="264.0" y="145.5" text-anchor="middle" font-size="11" fill="#2d3748">12.87</text>
 <text x="264.0" y="264.0" text-anchor="end" font-size="11" fill="#4a5568" transform="rotate(-35 264.0 264.0)">subject_02</text>
-<rect x="364.8" y="147.6" width="86.4" height="100.4" fill="#2b6cb0" rx="2"/>
-<text x="408.0" y="141.6" text-anchor="middle" font-size="11" fill="#2d3748">7.92</text>
+<rect x="364.8" y="199.5" width="86.4" height="48.5" fill="#2b6cb0" rx="2"/>
+<text x="408.0" y="193.5" text-anchor="middle" font-size="11" fill="#2d3748">6.47</text>
 <text x="408.0" y="264.0" text-anchor="end" font-size="11" fill="#4a5568" transform="rotate(-35 408.0 264.0)">subject_03</text>
 <rect x="508.8" y="36.0" width="86.4" height="212.0" fill="#2b6cb0" rx="2"/>
-<text x="552.0" y="30.0" text-anchor="middle" font-size="11" fill="#2d3748">16.73</text>
+<text x="552.0" y="30.0" text-anchor="middle" font-size="11" fill="#2d3748">28.28</text>
 <text x="552.0" y="264.0" text-anchor="end" font-size="11" fill="#4a5568" transform="rotate(-35 552.0 264.0)">pytest-risktest (self-hosted)</text>
 </svg>
