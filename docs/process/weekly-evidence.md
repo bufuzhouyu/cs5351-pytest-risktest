@@ -17,7 +17,7 @@ blank on purpose — the team fills them as the work happens.
 | 8 | 2026-11-22 | 张力元 (M4) | [#9](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/9) | [PR #13](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/13), commit [`34c6da4`](https://github.com/bufuzhouyu/cs5351-pytest-risktest/commit/34c6da4) | [跑测记录](benchmark-rerun-2026-11.md)，4 个目标 × 4 个变异 × 3 种策略，48 次运行漏报为 0；完整测试 121 passed | 默认 seed 出现重复变异，使用 20260102 |
 | 9 | | | | | | |
 | 10 | | | | | | |
-| 11 | 2026-11-23 | 庄志洋 (M5) | [#10](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/10) | [PR #15](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/15)、[PR #18](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/18) | 5 分钟讲解 + 2 分钟 Q&A 的演示稿与演示脚本；三次彩排记录（8:00、7:00、5:00）；备份截图和 11/30 投影检查待完成 | 线下 Pre，不录视频 |
+| 11 | 2026-11-23 | 庄志洋 (M5) | [#10](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/10) | [PR #15](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/15)、[PR #18](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/18) | 5 分钟讲解 + 2 分钟 Q&A 的演示稿与演示脚本；三次彩排时长（8:00、7:00、5:00，为 presenter 自报，`docs/report/rehearsal-notes.md` 标注 unverified）；备份截图和 11/30 投影检查待完成 | 线下 Pre，不录视频；本行由 M1 代录，待 M5 本人确认 |
 | 12 | 2026-11-22 | 赵尊 (M1) | [#6](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/6) | [PR #5](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/5)（`63eaea8`、`ca96a34`） | CI 5/5 全绿（Python 3.12/3.13 × Ubuntu/Windows + benchmark smoke）；tag `v0.1.0`；6 个 Issue 已创建并指派；补上 pytest 安装步骤修复 CI | 分支保护已生效；待 PR #5 审批合并 |
 | 13 | | | | | | |
 
