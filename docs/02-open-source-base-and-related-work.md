@@ -38,8 +38,9 @@ reproduced by a reviewer with a single command.
    from the `PY_START` callback and disables the now-redundant entry event; code
    outside the project never pays for line events.  Measured effect
    (`benchmark/results/tracing-strategies.md`): on a library-dominated workload
-   overhead drops from +97 % (global) to −2 % (local); on a hot-loop workload both
-   strategies cost ~60×, which is why *file* granularity is the default.
+   overhead drops from +120.36 % (global) to +29.86 % (local); on a hot-loop
+   workload both line strategies cost about 63×, which is why *file* granularity
+   is the default.
 3. **Explainable prioritisation without a model.**  The risk score is a documented
    weighted sum of observable state, so a reviewer can reproduce any ordering from
    the SQLite store and the run report.

@@ -1,8 +1,8 @@
 # Weekly evidence and contribution ownership
 
 This note gives M6 the two inputs needed for PR #21.  The hours below are the
-lead's proposed allocation based on the work visible in the repository.  Each
-member should confirm or adjust their own hours before the final report.
+team's accepted allocation from the agreed timetable.  They are used unchanged
+in the report and in `docs/report/contribution-table.csv`.
 
 ## Weekly evidence ownership
 
@@ -26,7 +26,7 @@ Weeks 4, 6, 7, 9 and 10 have no separate activity record.  Do not invent rows.
 The work from those periods is captured in the adjacent weekly rows and in the
 PR history.
 
-## Contribution hours (lead proposal)
+## Contribution hours (accepted timetable)
 
 | Member | Sprint 1 | Sprint 2 | Sprint 3 | Total | Share |
 | --- | --- | --- | --- | --- | --- |

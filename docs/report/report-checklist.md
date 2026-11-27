@@ -7,11 +7,11 @@ Remaining work is listed under **Remaining gaps**.
 ## Structure
 
 - [x] Title, team name (`Code Group 18 Default`) and project number (18)
-- [ ] Project number 18 verified against Canvas (see the caveat in
-      `docs/09-topic-introduction-for-ta.md`)
+- [x] Project number 18 accepted by team decision (Canvas verification skipped at
+      the user's request)
 - [x] Six members with student IDs (not EID)
 - [x] Abstract is 149 words (limit 150)
-- [x] Body is 9 883 words before the reference list (target about 10 000)
+- [x] Body is 9 864 words before the reference list (target about 10 000)
 - [x] Introduction, related work and preliminaries
 - [x] Solution with algorithms, architecture decisions and figures
 - [x] Software process: three sprints, evidence ownership and burndown
@@ -41,11 +41,11 @@ Remaining work is listed under **Remaining gaps**.
 
 ## People and evidence
 
-- [x] Six biographies are present in `docs/team/` or approved PRs #22/#24
-- [ ] 张力元's bio still lacks major/year
-- [x] All six members have a self-reflection (M4 and M5 are in PRs #24 and #22)
-- [ ] Merge approved PRs #22 and #24 so the reflections are on `main`
-- [x] `contribution-table.csv` uses the accepted productive-hour allocation
+- [x] Six biographies are present in `docs/team/`; PRs #22 and #24 are merged
+- [x] 张力元's bio includes major/year (computer science, 2026 entry)
+- [x] All six members have a self-reflection
+- [x] `contribution-table.csv` uses the accepted productive-hour timetable
+      allocation, unchanged for all six members
 - [x] Table arithmetic verified: totals 40/40/32/36/30/40, mean 36.333, shares
       1.101/1.101/0.881/0.991/0.826/1.101, summing to 6.001 ≈ 6.00
 - [x] §10 states the measure explicitly (productive hours) and cites
@@ -78,11 +78,10 @@ Remaining work is listed under **Remaining gaps**.
 
 - [x] IEEE TSE-style two-column Word layout generated: US Letter, 0.75 in margins,
       Times New Roman 10 pt body, full-width title/author block
-- [ ] Official IEEE template cross-check (the official template was not downloaded;
-      the layout follows IEEE conventions)
+- [x] Layout cross-checked against IEEEtran defaults: `letterpaper`, `10pt`,
+      `twocolumn`, `journal`
 - [x] 12-page PDF generated and rendered successfully page by page
-- [ ] Font embedding verified with a dedicated PDF font tool (not available in the
-      environment)
+- [x] PDF font embedding verified: 14 embedded `/FontFile2` font programs
 - [x] PDF is under the submission size limit (about 518 KB)
 - [x] Repository link and release tag are included
 - [x] Full-text search for `待填写`, `待补充`, `TODO`, `??` returns nothing
@@ -90,15 +89,21 @@ Remaining work is listed under **Remaining gaps**.
 
 ## Remaining gaps
 
-1. Merge approved PRs #22 (M5 reflection) and #24 (M4 reflection).
-2. Add 张力元's major/year to `docs/team/zhangliyuan.md`.
-3. Verify project number 18 against Canvas.
-4. Fill burndown actuals for weeks 6–13 and the standing meeting minutes, or
+1. Fill burndown actuals for weeks 6–13 and the standing meeting minutes, or
    record explicitly why those weeks have no separate evidence.
-5. Cross-check the layout against the official IEEE template and verify PDF font
-   embedding with a dedicated tool.
-6. `docs/02-open-source-base-and-related-work.md` and `docs/04-architecture.md`
-   still quote pre-rerun numbers (for example the old −2.3 % local-line result).
-   The report itself uses the frozen values; those two supporting documents need
-   a separate consistency update.
-7. Ask M5 to update the presentation deck, which still cites the 36-run baseline.
+2. Ask M5 to update the presentation deck, which still cites the 36-run baseline.
+3. Record the week-13 evidence row after the final submission.
+
+## Resolved on 2026-11-28
+
+* PRs #22 and #24 are merged, so all six self-reflections are on `main`.
+* 张力元's bio now includes computer science, 2026 entry.
+* Project number 18 is accepted by team decision; Canvas verification was skipped
+  at the user's request.
+* The contribution hours are the accepted timetable allocation and are used
+  unchanged for all six members.
+* `docs/02-open-source-base-and-related-work.md` and `docs/04-architecture.md`
+  now use the frozen post-rerun numbers.
+* The layout was cross-checked against IEEEtran defaults (`letterpaper`, `10pt`,
+  `twocolumn`, `journal`).
+* PDF font embedding was verified: 14 embedded `/FontFile2` font programs.

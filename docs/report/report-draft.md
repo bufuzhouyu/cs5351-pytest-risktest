@@ -980,10 +980,9 @@ consecutive runs -- the one place where staleness can still cost recall.
 ## 9. Student Bios and Self-Reflection
 
 The following profiles are based on each member's own biography and
-self-reflection in `docs/team/`; the M4 and M5 reflections come from approved PRs
-#24 and #22, which should be merged before final submission.  Chinese source text
-is translated into English without adding experiences or claims.  Each member
-owns the reflection written under their name.
+self-reflection in `docs/team/`; the M4 and M5 reflections were merged from PRs
+#24 and #22.  Chinese source text is translated into English without adding
+experiences or claims.  Each member owns the reflection written under their name.
 
 ### Zhao Zun (72610823)
 
@@ -1147,10 +1146,9 @@ contribution table would be traceable from the start.
 ## 10. Relative Contribution
 
 The team uses **productive hours** as the common measure for all six members.
-The source is `docs/process/evidence-ownership.md`, where the lead recorded the
-proposed allocation and asked each member to confirm or adjust their own row.
-The values below are the allocation accepted for this report.  Table X gives the
-three sprint totals and the course-required share.
+The source is `docs/process/evidence-ownership.md`, which records the team's
+accepted timetable allocation.  The values below are used unchanged for every
+member.  Table X gives the three sprint totals and the course-required share.
 
 **Table X.** Relative contribution in productive hours.  `Share` is the member's
 total divided by the six-member mean (36.333 hours).
