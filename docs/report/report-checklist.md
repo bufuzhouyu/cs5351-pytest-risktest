@@ -53,8 +53,11 @@ Remaining work is listed under **Remaining gaps**.
 - [x] Weekly evidence follows `docs/process/evidence-ownership.md`; weeks 4, 6, 7,
       9 and 10 stay empty by decision
 - [ ] Week 13 row to be recorded by M6 after the final submission
-- [ ] Burndown actuals for weeks 6–13 are still missing (only weeks 1–5 filled)
-- [ ] Standing meeting minutes are still empty
+- [x] Burndown notes for weeks 6, 7, 9 and 10 record “no separate activity
+      recorded”; actual values stay blank rather than being invented
+- [ ] Burndown actuals for weeks 8, 11, 12 and 13 still need owner confirmation
+- [x] No separate standing meeting minutes were recorded; the empty table was
+      removed and replaced with an explicit note
 - [x] Risk register and coding-agent contract are referenced
 
 ## Figures and tables
@@ -89,8 +92,8 @@ Remaining work is listed under **Remaining gaps**.
 
 ## Remaining gaps
 
-1. Fill burndown actuals for weeks 6–13 and the standing meeting minutes, or
-   record explicitly why those weeks have no separate evidence.
+1. Confirm burndown actuals for weeks 8, 11, 12 and 13 with the respective week
+   owners (M4, M5, M1 and M6).
 2. Ask M5 to update the presentation deck, which still cites the 36-run baseline.
 3. Record the week-13 evidence row after the final submission.
 

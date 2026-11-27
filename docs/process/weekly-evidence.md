@@ -21,12 +21,8 @@ blank on purpose — the team fills them as the work happens.
 | 12 | 2026-11-22 | 赵尊 (M1) | [#6](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/6) | [PR #5](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/5)（`63eaea8`、`ca96a34`） | CI 5/5 全绿（Python 3.12/3.13 × Ubuntu/Windows + benchmark smoke）；tag `v0.1.0`；6 个 Issue 已创建并指派；补上 pytest 安装步骤修复 CI | 分支保护已生效；待 PR #5 审批合并 |
 | 13 | | | | | | |
 
-## Standing meeting minutes
+## Standing meeting evidence
 
-One entry per week: date, attendees, decisions, blockers, next action with owner.
-
-| Week | Date | Decisions | Blockers | Next action (owner) |
-| --- | --- | --- | --- | --- |
-| 1 | | | | |
-| 2 | | | | |
+No separate standing meeting minutes were recorded.  Weekly activity and
+decisions are documented in the table above; no minutes have been invented.
 
