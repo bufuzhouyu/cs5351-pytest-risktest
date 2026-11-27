@@ -1,7 +1,8 @@
 # IEEE TSE report checklist
 
-Status: content audit completed 2026-11-27 against `report-draft.md` on
-`sprint-3/m6-report-scaffold`.  Remaining work is listed under **Remaining gaps**.
+Status: content audit and IEEE-style layout completed 2026-11-27 on
+`sprint-3/m6-report-scaffold`.  The Word and PDF files are in `docs/report/`.
+Remaining work is listed under **Remaining gaps**.
 
 ## Structure
 
@@ -10,7 +11,7 @@ Status: content audit completed 2026-11-27 against `report-draft.md` on
       `docs/09-topic-introduction-for-ta.md`)
 - [x] Six members with student IDs (not EID)
 - [x] Abstract is 149 words (limit 150)
-- [x] Body is 9 880 words before the reference list (target about 10 000)
+- [x] Body is 9 883 words before the reference list (target about 10 000)
 - [x] Introduction, related work and preliminaries
 - [x] Solution with algorithms, architecture decisions and figures
 - [x] Software process: three sprints, evidence ownership and burndown
@@ -63,8 +64,8 @@ Status: content audit completed 2026-11-27 against `report-draft.md` on
 - [x] Figure numbering is continuous (Figs. 1–8)
 - [x] Table numbering is continuous (Tables I–X, plus Table A1 in the appendix)
 - [x] All eight generated figures are used
-- [ ] Figures render at readable size in the final Word/PDF layout
-- [ ] Captions are checked against the final layout
+- [x] Figures render at readable size in the 12-page PDF (visual check)
+- [x] Captions are complete and checked against the final layout
 
 ## References
 
@@ -75,13 +76,17 @@ Status: content audit completed 2026-11-27 against `report-draft.md` on
 
 ## Final checks
 
-- [ ] Report uses the IEEE TSE Word or LaTeX template
-- [ ] Page count and formatting match the template
-- [ ] PDF opens correctly and fonts are embedded
-- [ ] PDF is under the submission size limit
+- [x] IEEE TSE-style two-column Word layout generated: US Letter, 0.75 in margins,
+      Times New Roman 10 pt body, full-width title/author block
+- [ ] Official IEEE template cross-check (the official template was not downloaded;
+      the layout follows IEEE conventions)
+- [x] 12-page PDF generated and rendered successfully page by page
+- [ ] Font embedding verified with a dedicated PDF font tool (not available in the
+      environment)
+- [x] PDF is under the submission size limit (about 518 KB)
 - [x] Repository link and release tag are included
-- [ ] Full-text search for `待填写`, `待补充`, `TODO`, `??` returns nothing
-- [ ] Final read-through after typesetting
+- [x] Full-text search for `待填写`, `待补充`, `TODO`, `??` returns nothing
+- [x] Final read-through after typesetting
 
 ## Remaining gaps
 
@@ -90,8 +95,10 @@ Status: content audit completed 2026-11-27 against `report-draft.md` on
 3. Verify project number 18 against Canvas.
 4. Fill burndown actuals for weeks 6–13 and the standing meeting minutes, or
    record explicitly why those weeks have no separate evidence.
-5. Typeset the report in the IEEE template and export the PDF.
+5. Cross-check the layout against the official IEEE template and verify PDF font
+   embedding with a dedicated tool.
 6. `docs/02-open-source-base-and-related-work.md` and `docs/04-architecture.md`
    still quote pre-rerun numbers (for example the old −2.3 % local-line result).
    The report itself uses the frozen values; those two supporting documents need
    a separate consistency update.
+7. Ask M5 to update the presentation deck, which still cites the 36-run baseline.
