@@ -11,7 +11,7 @@ Remaining work is listed under **Remaining gaps**.
       the user's request)
 - [x] Six members with student IDs (not EID)
 - [x] Abstract is 149 words (limit 150)
-- [x] Body is 9 864 words before the reference list (target about 10 000)
+- [x] Body is 9 870 words before the reference list (target about 10 000)
 - [x] Introduction, related work and preliminaries
 - [x] Solution with algorithms, architecture decisions and figures
 - [x] Software process: three sprints, evidence ownership and burndown

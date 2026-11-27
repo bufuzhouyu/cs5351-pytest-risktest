@@ -1061,13 +1061,14 @@ against the English README before review.
 
 ### Zhang Liyuan (72610454)
 
-**Background and role.** Zhang Liyuan is studying Go development and AI-agent
-technologies, and also writes Python scripts.  Through this project he became
-familiar with Git/GitHub branches, commits, PRs and review, and with checking
-benchmark results.  He served as M4 (evaluation and benchmark), re-running four
-targets with four mutations each, preserving raw results, updating figures and
-interpreting recall, skip rate and observation overhead.  His current interests
-are backend development and integrating agents into real backend services.
+**Background and role.** Zhang Liyuan is a 2026-entry computer science student
+studying Go development and AI-agent technologies, and he also writes Python
+scripts.  Through this project he became familiar with Git/GitHub branches,
+commits, PRs and review, and with checking benchmark results.  He served as M4
+(evaluation and benchmark), re-running four targets with four mutations each,
+preserving raw results, updating figures and interpreting recall, skip rate and
+observation overhead.  His current interests are backend development and
+integrating agents into real backend services.
 
 **Technical ideas and contribution.** Zhang Liyuan's evaluation work is recorded
 in `docs/process/benchmark-rerun-2026-11.md`.  The final protocol ran four targets
