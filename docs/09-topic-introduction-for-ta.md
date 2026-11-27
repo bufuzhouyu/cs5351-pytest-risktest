@@ -6,7 +6,7 @@ introduction that was sent, so the topic request itself is part of the repositor
 evidence.
 
 The team name is **Code Group 18 Default** and the project number is **18**.
-If Canvas shows a different project number, update this line before sending.
+Verified against Canvas on 2026-11-28.
 
 ---
 

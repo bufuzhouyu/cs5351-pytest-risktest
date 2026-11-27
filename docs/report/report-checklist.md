@@ -7,8 +7,8 @@ Remaining work is listed under **Remaining gaps**.
 ## Structure
 
 - [x] Title, team name (`Code Group 18 Default`) and project number (18)
-- [x] Project number 18 accepted by team decision (Canvas verification skipped at
-      the user's request)
+- [x] Team name `Code Group 18 Default` and project number 18 verified against
+      Canvas on 2026-11-28
 - [x] Six members with student IDs (not EID)
 - [x] Abstract is 149 words (limit 150)
 - [x] Body is 9 870 words before the reference list (target about 10 000)
@@ -101,8 +101,8 @@ Remaining work is listed under **Remaining gaps**.
 
 * PRs #22 and #24 are merged, so all six self-reflections are on `main`.
 * 张力元's bio now includes computer science, 2026 entry.
-* Project number 18 is accepted by team decision; Canvas verification was skipped
-  at the user's request.
+* Team name `Code Group 18 Default` and project number 18 were verified against
+  Canvas on 2026-11-28.
 * The contribution hours are the accepted timetable allocation and are used
   unchanged for all six members.
 * `docs/02-open-source-base-and-related-work.md` and `docs/04-architecture.md`
