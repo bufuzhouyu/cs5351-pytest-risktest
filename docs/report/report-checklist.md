@@ -70,7 +70,8 @@ Remaining work is listed under **Remaining gaps**.
 - [x] Table numbering is continuous (Tables I–X, plus Table A1 in the appendix)
 - [x] All eight generated figures are used
 - [x] Figures render at readable size in the 12-page PDF (visual check)
-- [x] Captions are complete and checked against the final layout
+- [x] Figure captions are placed below each image as a complete paragraph with
+      6 pt spacing; table captions remain above their tables
 
 ## References
 
