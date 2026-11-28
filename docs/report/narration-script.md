@@ -34,7 +34,7 @@
 
 旁白：
 
-我们在 12 次已经确认会破坏测试的改动上测量，一次改动真正影响到的测试只占整个套件的 9% 到 31%，但默认做法是把 100% 全部跑一遍，所以反馈时间跟着套件规模增长。
+早期评测中，一次经验证的改动影响的测试只占整个套件的 9% 到 31%，但默认做法是把 100% 全部跑一遍，所以反馈时间跟着套件规模增长。
 
 更麻烦的是，随便跳过测试会把真实失败藏起来。一次漏报就会让红色提交看起来是绿色。因此设计受到四个约束：证据可能不完整、观测本身不能太贵、每个跳过都要能复查、以及安全优先。
 
@@ -50,7 +50,7 @@
 
 工具分四步：PEP 669 监控器记录每个测试实际执行了哪些文件；静态导入图补上可能到达的文件；两者和历史结果一起存进一个 SQLite 文件；选择引擎生成计划，按风险排序后交给 pytest。
 
-策略有三档：fast 只看动态证据，跳过约 85%；balanced 再看一跳导入关系，跳过约 71%；safe 使用完整闭包，跳过约 69%，推荐用于 CI。安全层有三条：新测试、上次失败和闪烁测试必跑；最多只跳过 90%；无法追踪的测试用 risktest_always 强制运行。
+策略有三档：fast 只看动态证据，跳过 85.2%；balanced 再看一跳导入关系，跳过 74.6%；safe 使用完整闭包，跳过 73.1%，推荐用于 CI。安全层有三条：新测试、上次失败和闪烁测试必跑；最多只跳过 90%；无法追踪的测试用 risktest_always 强制运行。
 
 ---
 
@@ -94,13 +94,13 @@
 
 ## 4:45–5:50 评测
 
-幻灯片：`Evaluation contract frozen before measurement`，然后 `69% to 85% skipped, every failure detected`
+幻灯片：`Evaluation contract frozen before measurement`，然后 `73.1% to 85.2% skipped, every failure detected`
 
 旁白：
 
-评测协议在看结果之前就固定了。四个目标：三个生成的 layered 工程，加上本项目自己的测试套件。每次注入的缺陷都必须先证明能打挂至少一个测试，真值来自不带插件的普通 pytest 运行。每个策略开始前都恢复依赖库快照。
+评测协议在看结果之前就固定了。四个目标包括三个各有 88 个测试的生成项目，以及有 103 个测试的自托管套件。16 个经验证的突变各跑三种策略，共 48 次。每个突变必须至少让一个测试失败，真值来自普通 pytest 运行，每次策略运行前恢复依赖库快照。
 
-36 次运行的结果：fast 跳过 85.4%，balanced 跳过 71.4%，safe 跳过 69.3%，三个策略的最差召回率都是 1.000，漏掉的失败是 0。全量运行按收集顺序的 APFD 是 0.659，按风险排序后是 0.925，失败更早出现。测试执行时间节省了 63% 到 85%。纯墙钟时间只节省 10% 到 18%，因为小套件里解释器和 pytest 启动占了固定成本。
+48 次运行中，fast、balanced、safe 的跳过率分别是 85.2%、74.6%、73.1%，测试执行工作量分别节省 85.3%、69.4%、67.5%。最差召回率均为 1.000，零漏报。风险排序的 APFD 从收集顺序基线的 0.521 提升到 0.925，墙钟时间节省 18.5%–25.2%。文件级追踪开销在三个生成目标上是 6.47%–12.87%，在自托管套件上是 28.28%，超过 20% 阈值。
 
 ---
 
@@ -110,7 +110,7 @@
 
 旁白：
 
-两个局限也做了测量。第一，行级粒度在 CPU 密集的套件上会慢 5 倍以上，所以项目自己的套件是 26%，我们仍然把文件级设为默认。第二，子进程里的代码追踪不到。不声明时两个真实失败漏掉一个，加上 risktest_always 后两个都能检出。
+行级追踪在依赖库调用为主的套件上，开销从 +120.36% 降到 +29.86%；在 hot-loop 套件上，追踪后的运行时间约为基线的 63 倍。我们因此保留文件级追踪作为默认。子进程里的代码追踪不到，不声明时两个真实失败漏掉一个，加上 risktest_always 后两个都能检出。
 
 过程上，三个 sprint 分别完成工具骨架和安全网、排序和闪烁测试排查、端到端测试和评测。仓库里有 99 个自动化测试、Windows 和 Ubuntu 的 CI，以及冻结的评测契约。我们还发现并修复了两个会破坏评测可信度的问题，都记录在风险登记里。
 
@@ -137,7 +137,7 @@
 5. The tool turns observed execution, static reachability and history into a reviewable plan.
 6. Three named policies make the precision and cost trade-off explicit.
 7. The evaluation contract was frozen before measurement.
-8. Across 36 verified mutations, every failure was detected with 69% to 85% of the suite skipped.
+8. Across 48 runs, every failure was detected, and the policies skipped 73.1% to 85.2% of tests.
 9. We measured two limits and changed the defaults because of them.
 10. Three sprints produced a working tool, a reproducible evaluation and a reviewable process.
 
