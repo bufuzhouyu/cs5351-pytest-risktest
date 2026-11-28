@@ -65,8 +65,9 @@ tests.  Static-only analysis cannot tell which tests really exercise a file
 (the generated subjects show a module-level constant that no test reads); import
 instrumentation cannot see dynamic behaviour.
 
-*Evidence.* file granularity costs −8.5 %…+16.7 %; a full tracer would sit at the
-line-granularity cost measured in `benchmark/results/tracing-strategies.md`.
+*Evidence.* file granularity costs +6.47 %…+12.87 % on the three generated
+targets and +28.28 % on the self-hosted target; line granularity is far higher,
+as measured in `benchmark/results/tracing-strategies.md`.
 
 *Consequences.* Python ≥ 3.12 is required; the plugin must degrade explicitly on
 older interpreters.  `sys.monitoring` gives exclusive tool ids, so the monitor
@@ -86,10 +87,10 @@ third-party Python code.  (b) needs a full module inventory before collection an
 misses dynamically imported modules.  (c) pays one entry event per code object and
 then only for project code, which is exactly the information the selector needs.
 
-*Evidence.* library-bound workload: +97.2 % (global) vs −2.3 % (local);
-hot-loop workload: +6046 % vs +6170 % — the strategy cannot help when the hot code
-is project code, which is why file granularity stays the default
-(`benchmark/results/tracing-strategies.md`).
+*Evidence.* library-bound workload: +120.36 % (global) vs +29.86 % (local);
+hot-loop workload: +6339.36 % (global) vs +6276.20 % (local) — the strategy
+cannot help when the hot code is project code, which is why file granularity
+stays the default (`benchmark/results/tracing-strategies.md`).
 
 *Consequences.* Local events are not cleared by `set_events(tool, 0)`, so the
 monitor releases every instrumented code object explicitly at the end of a test
@@ -105,10 +106,10 @@ default, line on request with a measured cost warning.
 *Decision.* (c).
 
 *Rationale.* A file-level dependency answers the review question ("can this change
-affect this test?") at ~0 % overhead, and the evaluation shows it is sufficient for
-recall = 1.0 on 36 verified mutations.  Line granularity buys extra precision
-(`changed-line` reason) at a cost that can reach two orders of magnitude on
-CPU-bound tests.
+affect this test?") at modest overhead, and the evaluation shows it is sufficient
+for recall = 1.0 across 48 runs (16 verified mutations × 3 policies).  Line
+granularity buys extra precision (`changed-line` reason) at a cost that can reach
+two orders of magnitude on CPU-bound tests.
 
 *Evidence.* `benchmark/results/summary.md` (recall/skip-rate per policy),
 `benchmark/results/tracing-strategies.md` (cost).
@@ -149,8 +150,8 @@ Cheap-history and flakiness signals cover non-code causes.  (d) was rejected
 because an unexplainable skip cannot be reviewed, and the repository has to keep
 every decision auditable.
 
-*Evidence.* `fast` (dynamic only) reaches the highest skip rate (0.854) but relies
-on traces alone; `balanced`/`safe` add the closure (0.714/0.693 skip rate).  All
+*Evidence.* `fast` (dynamic only) reaches the highest skip rate (0.852) but relies
+on traces alone; `balanced`/`safe` add the closure (0.746/0.731 skip rate).  All
 three kept recall at 1.0, so the extra conservatism is visible as *cost*, not as
 a safety gain, on these subjects — the boundary experiment shows when it does
 become a safety gain.

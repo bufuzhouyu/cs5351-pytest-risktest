@@ -1,7 +1,7 @@
 # Team
 
-**Team name:** `<team name>` (to be confirmed)
-**Project:** pytest-risktest
+**Team name:** Code Group 18 Default
+**Project:** pytest-risktest (project number 18)
 **Repository:** https://github.com/bufuzhouyu/cs5351-pytest-risktest
 **Course:** CS5351 Software Engineering
 

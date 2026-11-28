@@ -4,7 +4,7 @@
 
 `pytest-risktest` 是一个面向开发团队的软件工程工具：它会观察每个测试实际覆盖了项目的哪些文件，然后依据这些证据，*只运行受本次改动影响的测试*，并按*风险顺序*执行，同时拒绝用自身的跳过决策来掩盖失败。
 
-本仓库是 CS5351 软件工程课程项目（团队 `<team name>`，项目 `pytest-risktest`）。团队成员为赵尊（组长，`@bufuzhouyu`）、代佳乐（`@lele2204`）、肖宇（`@kaito-hqs`）、张力元（`@Yuan07292003`）、庄志洋（`@f-zhuang`）和周浩然（`@Cyanova-zhou`）。课程要求与本仓库产物的对应关系见
+本仓库是 CS5351 软件工程课程项目（团队 `Code Group 18 Default`，项目 `pytest-risktest`）。团队成员为赵尊（组长，`@bufuzhouyu`）、代佳乐（`@lele2204`）、肖宇（`@kaito-hqs`）、张力元（`@Yuan07292003`）、庄志洋（`@f-zhuang`）和周浩然（`@Cyanova-zhou`）。课程要求与本仓库产物的对应关系见
 [docs/00-assignment-mapping.md](docs/00-assignment-mapping.md)。
 
 ## 功能概览

@@ -20,7 +20,7 @@ the whole repository.
 | 10 | Implement original/improved algorithms for a specific development problem | adaptive multi-signal selection + risk ordering + differential flakiness + deferred local line instrumentation (PEP 669) | done |
 | 11–12 | Improvement on existing tasks / extension / applicability change | improves test impact analysis (precision *and* safety), extends it with prioritisation and flakiness triage | done |
 | 14 | Relative contribution table | template at the end of `docs/report/report-draft.md` | team must fill in hours |
-| 15 | Milestone 0: team list, team name, project name | `TEAM.md` (six members with IDs and GitHub handles), `README.md` (project `pytest-risktest`) | member list filled; team name and project number still to be confirmed |
+| 15 | Milestone 0: team list, team name, project name | `TEAM.md` (six members with IDs and GitHub handles), `README.md` (project `pytest-risktest`) | team name `Code Group 18 Default` and project number `18` recorded and verified against Canvas on 2026-11-28 |
 | 16 | Source code on GitHub | this repository (git-initialised, one commit per logical change) | ready to push |
 | 17 | Report in IEEE TSE format | Markdown draft with the required section structure and figure placeholders | team must transfer to the Word/LaTeX template |
 | 18–20 | Report content: title, abstract, introduction, related work, preliminaries, solution, software process + burndown, evaluation, conclusion, bios, relative contribution | `docs/report/report-draft.md` (sections 1–8 drafted); bios/self-reflection/contribution are personal and left to each student | partially — see "must be completed" below |
@@ -51,9 +51,9 @@ the whole repository.
 These items are deliberately *not* fabricated here, because they require the
 team's own decisions, hours or personal reflection:
 
-1. **Names and identifiers** — team name, project number, and the final GitHub
-   repository URL.  The six-member list with student IDs and GitHub handles is
-   already in `TEAM.md`, `README.md` and the report.
+1. **Names and identifiers** — only confirm the final GitHub repository URL if
+   the repository is renamed.  The team name, project number and six-member list
+   with student IDs are already recorded in `TEAM.md`, `README.md` and the report.
 2. **Weekly evidence and burndown actuals** — weeks 2–13 are still to be lived:
    fill `docs/process/weekly-evidence.md`, `docs/process/burndown.csv` and the
    sprint review logs each week (issue → commit → test evidence).
