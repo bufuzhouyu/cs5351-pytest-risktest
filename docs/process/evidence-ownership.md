@@ -20,7 +20,7 @@ in the report and in `docs/report/contribution-table.csv`.
 | 10 | — | — | no separate activity recorded |
 | 11 | 2026-11-23 | 庄志洋 (M5) | recorded in PR #21 |
 | 12 | 2026-11-22 | 赵尊 (M1) | recorded |
-| 13 | 2026-12-03 | 周浩然 (M6) | to record after final submission |
+| 13 | 2026-12-03 | 周浩然 (M6) | final report prepared; submission receipt pending |
 
 Weeks 4, 6, 7, 9 and 10 have no separate activity record.  Do not invent rows.
 The work from those periods is captured in the adjacent weekly rows and in the

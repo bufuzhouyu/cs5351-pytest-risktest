@@ -36,8 +36,8 @@ Remaining work is listed under **Remaining gaps**.
 - [x] `time_saved` (wall clock) and `work_saved` (test execution work) are never
       used interchangeably in the abstract, §1.4, §6 or §8
 - [x] Figures in `docs/report/figures/` are the regenerated post-rerun versions
-- [ ] Presentation deck still cites the 36-run baseline
-      (`docs/report/rehearsal-notes.md` flags this) — M5 to confirm
+- [x] Presentation deck, narration, outline and backup screenshots updated to the
+      frozen 48-run results in PR #27 and merged
 
 ## People and evidence
 
@@ -52,10 +52,12 @@ Remaining work is listed under **Remaining gaps**.
       `docs/process/evidence-ownership.md` as the source
 - [x] Weekly evidence follows `docs/process/evidence-ownership.md`; weeks 4, 6, 7,
       9 and 10 stay empty by decision
-- [ ] Week 13 row to be recorded by M6 after the final submission
+- [x] Week-13 evidence row prepared by M6; the course submission receipt will be
+      appended after the final submission
 - [x] Burndown notes for weeks 6, 7, 9 and 10 record “no separate activity
       recorded”; actual values stay blank rather than being invented
-- [ ] Burndown actuals for weeks 8, 11, 12 and 13 still need owner confirmation
+- [x] Burndown notes for weeks 8, 11, 12 and 13 record “actual remaining not
+      recorded”; no values were invented
 - [x] No separate standing meeting minutes were recorded; the empty table was
       removed and replaced with an explicit note
 - [x] Risk register and coding-agent contract are referenced
@@ -92,10 +94,8 @@ Remaining work is listed under **Remaining gaps**.
 
 ## Remaining gaps
 
-1. Confirm burndown actuals for weeks 8, 11, 12 and 13 with the respective week
-   owners (M4, M5, M1 and M6).
-2. Ask M5 to update the presentation deck, which still cites the 36-run baseline.
-3. Record the week-13 evidence row after the final submission.
+No content gaps remain in PR #21.  The only post-submission action is to append
+the course submission receipt to the week-13 evidence row after 2026-12-03.
 
 ## Resolved on 2026-11-28
 
@@ -110,3 +110,9 @@ Remaining work is listed under **Remaining gaps**.
 * The layout was cross-checked against IEEEtran defaults (`letterpaper`, `10pt`,
   `twocolumn`, `journal`).
 * PDF font embedding was verified: 14 embedded `/FontFile2` font programs.
+* PR #27 is merged, so the deck, narration, outline and backup screenshots use
+  the frozen 48-run results.
+* Burndown weeks without recorded actuals are explicitly marked “no separate
+  activity recorded” or “actual remaining not recorded”; no values were invented.
+* The week-13 evidence row is prepared; only the final course submission receipt
+  remains to be appended after submission.

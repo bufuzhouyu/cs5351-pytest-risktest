@@ -19,7 +19,7 @@ blank on purpose — the team fills them as the work happens.
 | 10 | | | | | | |
 | 11 | 2026-11-23 | 庄志洋 (M5) | [#10](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/10) | [PR #15](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/15)、[PR #18](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/18) | 5 分钟讲解 + 2 分钟 Q&A 的演示稿与演示脚本；三次彩排时长（8:00、7:00、5:00，为 presenter 自报，`docs/report/rehearsal-notes.md` 标注 unverified）；备份截图和 11/30 投影检查待完成 | 线下 Pre，不录视频；本行由 M1 代录，待 M5 本人确认 |
 | 12 | 2026-11-22 | 赵尊 (M1) | [#6](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/6) | [PR #5](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/5)（`63eaea8`、`ca96a34`） | CI 5/5 全绿（Python 3.12/3.13 × Ubuntu/Windows + benchmark smoke）；tag `v0.1.0`；6 个 Issue 已创建并指派；补上 pytest 安装步骤修复 CI | 分支保护已生效；待 PR #5 审批合并 |
-| 13 | | | | | | |
+| 13 | 2026-12-03 | 周浩然 (M6) | [#11](https://github.com/bufuzhouyu/cs5351-pytest-risktest/issues/11) | [PR #21](https://github.com/bufuzhouyu/cs5351-pytest-risktest/pull/21) | 最终报告 Word/PDF 已生成；课程提交回执待提交后补入 | 待最终课程提交 |
 
 ## Standing meeting evidence
 
