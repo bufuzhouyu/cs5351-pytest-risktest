@@ -56,11 +56,11 @@ Run `.\scripts\demo.ps1` in the terminal.  Press Enter to advance each step.
 
 ## 4:45–5:50 — Evaluation
 
-* 36 verified mutations, 4 targets, 3 policies: skip 69–85 %, recall 1.000,
-  zero misses, APFD 0.659 → 0.925, 63–85 % of execution time saved, observation
-  within 20 %.
-* Honest limitations: line granularity cost, process-boundary blind spot with the
-  measured mitigation, wall-clock dilution by interpreter start-up.
+* 48 runs across four targets (16 verified mutations × 3 policies); 88 tests per generated target and 103 in the self-hosted suite.
+  Worst recall was 1.000 with zero misses. APFD rose from 0.521 to 0.925, and wall-clock savings were 18.5%–25.2%.
+  Fast, balanced and safe skipped 85.2%, 74.6% and 73.1%; work saved was 85.3%, 69.4% and 67.5%, respectively. File tracing overhead was 6.47%–12.87% on generated targets and 28.28% on the self-hosted suite.
+* Line tracing overhead fell from +120.36% to +29.86% on the library-bound suite.
+  Hot-loop runtime was about 63× baseline. Subprocesses remain a blind spot that the always-run marker can address.
 
 ## 5:50–6:35 — Process and creativity
 
